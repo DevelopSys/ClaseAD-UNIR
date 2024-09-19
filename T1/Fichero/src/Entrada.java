@@ -1,13 +1,23 @@
-import javax.lang.model.SourceVersion;
+
 import java.io.File;
 import java.io.IOException;
 
 public class Entrada {
 
-    public Entrada() {
-    }
+
 
     public static void main(String[] args) throws IOException {
+
+
+        GestorFicheros gestorFicheros = new GestorFicheros();
+        // gestorFicheros.lecturaDirectorios("src/resources/directorio");
+        // gestorFicheros.lecturaDirectorios("src/resources/ficheros");
+        gestorFicheros.lecturaRecursiva("/users/borja/documents/github");
+
+        // instancias de objetos y llamadas a metodos
+        // OBJETO CLASE 1
+        // OBJETO CLASE 2
+
         // FILE -> fichero logico -> fisico
         // fichero logico
         // File ficheroSinPuntero = new File("/Users/borja/Documents/GitHub/ClaseAD-UNIR/T1/Fichero/src/resources/directorio/ejemplo_fichero.md");

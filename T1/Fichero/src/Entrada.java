@@ -1,5 +1,6 @@
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Entrada {
@@ -12,7 +13,10 @@ public class Entrada {
         GestorFicheros gestorFicheros = new GestorFicheros();
         // gestorFicheros.lecturaDirectorios("src/resources/directorio");
         // gestorFicheros.lecturaDirectorios("src/resources/ficheros");
-        gestorFicheros.lecturaRecursiva("/users/borja/documents/github");
+        // gestorFicheros.lecturaRecursiva("/users/borja/documents/github");
+        gestorFicheros.lecturaTextoPlano("src/resources/ficheros/lectura.txt");
+
+
 
         // instancias de objetos y llamadas a metodos
         // OBJETO CLASE 1

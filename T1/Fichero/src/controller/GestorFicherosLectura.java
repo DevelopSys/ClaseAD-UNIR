@@ -2,7 +2,7 @@ package controller;
 
 import java.io.*;
 
-public class GestorFicheros {
+public class GestorFicherosLectura {
 
     // src/resources/directorio
     public void lecturaDirectorios(String path) {
@@ -115,4 +115,5 @@ public class GestorFicheros {
         }
 
     }
+
 }

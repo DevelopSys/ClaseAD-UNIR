@@ -1,18 +1,20 @@
-import controller.GestorFicheros;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import controller.GestionFicherosEscritura;
+import controller.GestorFicherosConjuntos;
+import controller.GestorFicherosLectura;
 
 public class Entrada {
 
     public static void main(String[] args) {
 
-        GestorFicheros gestorFicheros = new GestorFicheros();
+        //GestorFicherosLectura gestorFicherosLectura = new GestorFicherosLectura();
         // gestorFicheros.lecturaDirectorios("src/resources/directorio");
         // gestorFicheros.lecturaDirectorios("src/resources/ficheros");
         // gestorFicheros.lecturaRecursiva("/users/borja/documents/github");
-        gestorFicheros.lecturaTextoPlano("src/resources/ficheros/lectura.txt");
+        //gestorFicherosLectura.lecturaTextoPlano("src/resources/ficheros/lectura.txt");
+        //GestionFicherosEscritura gestionFicherosEscritura = new GestionFicherosEscritura();
+        //gestionFicherosEscritura.escribirFichero("src/resources/ficheros/");
+        GestorFicherosConjuntos gestorFicherosConjuntos = new GestorFicherosConjuntos();
+        gestorFicherosConjuntos.lecturaEscritura("src/resources/ficheros/cifrado.txt");
 
 
 

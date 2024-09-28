@@ -2,6 +2,8 @@ import controller.GestionFicherosEscritura;
 import controller.GestorFicherosConjuntos;
 import controller.GestorFicherosLectura;
 
+import java.util.Scanner;
+
 public class Entrada {
 
     public static void main(String[] args) {
@@ -14,8 +16,25 @@ public class Entrada {
         //GestionFicherosEscritura gestionFicherosEscritura = new GestionFicherosEscritura();
         //gestionFicherosEscritura.escribirFichero("src/resources/ficheros/");
         GestorFicherosConjuntos gestorFicherosConjuntos = new GestorFicherosConjuntos();
-        gestorFicherosConjuntos.lecturaEscritura("src/resources/ficheros/cifrado.txt");
+        Scanner scanner = new Scanner(System.in);
+        int opcion = 0;
+        do {
 
+
+            System.out.println("Introduce que quieres hacer");
+            opcion = scanner.nextInt();
+            switch (opcion) {
+                case 1:
+                    gestorFicherosConjuntos.cifrado("src/resources/ficheros/cifradoCodigo.txt");
+                    break;
+                case 2:
+                    gestorFicherosConjuntos.descifrarMensajeCodigo("src/resources/ficheros/cifradoCodigo.txt");
+                    break;
+            }
+        } while (opcion!=0);
+
+
+        // gestorFicherosConjuntos.cifrado("src/resources/ficheros/cifrado.txt");
 
 
         // instancias de objetos y llamadas a metodos

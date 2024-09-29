@@ -1,7 +1,10 @@
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import controller.GestionFicherosEscritura;
+import controller.GestorFicherosConjuntos;
+import controller.GestorFicherosLectura;
+
+
+import java.util.Scanner;
 
 public class Entrada {
 
@@ -10,12 +13,33 @@ public class Entrada {
     public static void main(String[] args) throws IOException {
 
 
-        GestorFicheros gestorFicheros = new GestorFicheros();
+        //GestorFicherosLectura gestorFicherosLectura = new GestorFicherosLectura();
         // gestorFicheros.lecturaDirectorios("src/resources/directorio");
         // gestorFicheros.lecturaDirectorios("src/resources/ficheros");
         // gestorFicheros.lecturaRecursiva("/users/borja/documents/github");
-        gestorFicheros.lecturaTextoPlano("src/resources/ficheros/lectura.txt");
+        //gestorFicherosLectura.lecturaTextoPlano("src/resources/ficheros/lectura.txt");
+        //GestionFicherosEscritura gestionFicherosEscritura = new GestionFicherosEscritura();
+        //gestionFicherosEscritura.escribirFichero("src/resources/ficheros/");
+        GestorFicherosConjuntos gestorFicherosConjuntos = new GestorFicherosConjuntos();
+        Scanner scanner = new Scanner(System.in);
+        int opcion = 0;
+        do {
 
+
+            System.out.println("Introduce que quieres hacer");
+            opcion = scanner.nextInt();
+            switch (opcion) {
+                case 1:
+                    gestorFicherosConjuntos.cifrado("src/resources/ficheros/cifradoCodigo.txt");
+                    break;
+                case 2:
+                    gestorFicherosConjuntos.descifrarMensajeCodigo("src/resources/ficheros/cifradoCodigo.txt");
+                    break;
+            }
+        } while (opcion!=0);
+
+
+        // gestorFicherosConjuntos.cifrado("src/resources/ficheros/cifrado.txt");
 
 
         // instancias de objetos y llamadas a metodos

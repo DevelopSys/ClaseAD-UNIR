@@ -6,7 +6,7 @@ public class Entrada {
 
     public static void main(String[] args) {
         PeticionJSON peticionJSON = new PeticionJSON();
-        peticionJSON.procesarPeticion();
+        // peticionJSON.procesarPeticion();
        /* File file = new File("src/main/java/resources/usuario.txt");
         // txt -> JSON
         BufferedReader bufferedReader = null;
@@ -46,5 +46,6 @@ public class Entrada {
         // 3. Filtrar por precio -> pide un precio mínimo o max y se muestran los prductos que cumplen dicho filtro
         // 4. Exportar productos -> Escribe en un .txt todos los productos de la URL -> JSON
         // BUSCAR INFORMACION DE LA LIRERIA GSON
+        peticionJSON.metodoMenu();
     }
 }

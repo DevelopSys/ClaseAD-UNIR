@@ -1,0 +1,62 @@
+title:Essence Mascara Lash Princess price:9,99 stock:5
+title:Eyeshadow Palette with Mirror price:19,99 stock:44
+title:Powder Canister price:14,99 stock:59
+title:Red Lipstick price:12,99 stock:68
+title:Red Nail Polish price:8,99 stock:71
+title:Calvin Klein CK One price:49,99 stock:17
+title:Chanel Coco Noir Eau De price:129,99 stock:41
+title:Dior J'adore price:89,99 stock:91
+title:Dolce Shine Eau de price:69,99 stock:3
+title:Gucci Bloom Eau de price:79,99 stock:93
+title:Annibale Colombo Bed price:1899,99 stock:47
+title:Annibale Colombo Sofa price:2499,99 stock:16
+title:Bedside Table African Cherry price:299,99 stock:16
+title:Knoll Saarinen Executive Conference Chair price:499,99 stock:47
+title:Wooden Bathroom Sink With Mirror price:799,99 stock:95
+title:Apple price:1,99 stock:9
+title:Beef Steak price:12,99 stock:96
+title:Cat Food price:8,99 stock:13
+title:Chicken Meat price:9,99 stock:69
+title:Cooking Oil price:4,99 stock:22
+title:Cucumber price:1,49 stock:22
+title:Dog Food price:10,99 stock:40
+title:Eggs price:2,99 stock:10
+title:Fish Steak price:14,99 stock:99
+title:Green Bell Pepper price:1,29 stock:89
+title:Green Chili Pepper price:0,99 stock:8
+title:Honey Jar price:6,99 stock:25
+title:Ice Cream price:5,49 stock:76
+title:Juice price:3,99 stock:99
+title:Kiwi price:2,49 stock:1
+title:Essence Mascara Lash Princess price:9,99 stock:5
+title:Eyeshadow Palette with Mirror price:19,99 stock:44
+title:Powder Canister price:14,99 stock:59
+title:Red Lipstick price:12,99 stock:68
+title:Red Nail Polish price:8,99 stock:71
+title:Calvin Klein CK One price:49,99 stock:17
+title:Chanel Coco Noir Eau De price:129,99 stock:41
+title:Dior J'adore price:89,99 stock:91
+title:Dolce Shine Eau de price:69,99 stock:3
+title:Gucci Bloom Eau de price:79,99 stock:93
+title:Annibale Colombo Bed price:1899,99 stock:47
+title:Annibale Colombo Sofa price:2499,99 stock:16
+title:Bedside Table African Cherry price:299,99 stock:16
+title:Knoll Saarinen Executive Conference Chair price:499,99 stock:47
+title:Wooden Bathroom Sink With Mirror price:799,99 stock:95
+title:Apple price:1,99 stock:9
+title:Beef Steak price:12,99 stock:96
+title:Cat Food price:8,99 stock:13
+title:Chicken Meat price:9,99 stock:69
+title:Cooking Oil price:4,99 stock:22
+title:Cucumber price:1,49 stock:22
+title:Dog Food price:10,99 stock:40
+title:Eggs price:2,99 stock:10
+title:Fish Steak price:14,99 stock:99
+title:Green Bell Pepper price:1,29 stock:89
+title:Green Chili Pepper price:0,99 stock:8
+title:Honey Jar price:6,99 stock:25
+title:Ice Cream price:5,49 stock:76
+title:Juice price:3,99 stock:99
+title:Kiwi price:2,49 stock:1a
+asdasdasdasdasd
+

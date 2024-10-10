@@ -12,15 +12,20 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Producto implements Serializable {
-    // id
+
+
+    private static final long serialVersionUID =  23456L;
     private int id;
     private String title;
     private double price;
     private int stock;
-
-    public Producto(String title, double price, int stock) {
-        this.title = title;
-        this.price = price;
-        this.stock = stock;
+    private int discont;
+    private String brand;
+    public void mostrarDatos(){
+        System.out.println("serialVersionUID = " + serialVersionUID);
+        System.out.println("id = " + id);
+        System.out.println("title = " + title);
+        System.out.println("price = " + price);
+        System.out.println("stock = " + stock);
     }
 }

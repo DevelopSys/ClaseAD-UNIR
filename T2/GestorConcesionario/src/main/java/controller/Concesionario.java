@@ -4,10 +4,7 @@ import database.DBConnecion;
 import database.SchemaDB;
 import model.Empleado;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Concesionario {
     // Statament -> "Query directa" -> INSERT INTO empleados (nombre, apellido
@@ -31,14 +28,15 @@ public class Concesionario {
         // ya puedo acceder a la base de datos
         try {
             Statement statement = connection.createStatement();
-            String Psquery = String.format("INSERT INTO %s (%s,%s,%s,%s) VALUES (?,?,?,?)",
+            String Psquery = String.format("INSERT INTO %s (%s,%s,%s,%s,%s) VALUES (?,?,?,?,?)",
                     SchemaDB.TAB_EMP,
-                    SchemaDB.COL_EMP_NAME, SchemaDB.COL_EMP_SURNAME, SchemaDB.COL_EMP_MAIL, SchemaDB.COL_EMP_PHO);
+                    SchemaDB.COL_EMP_NAME, SchemaDB.COL_EMP_SURNAME, SchemaDB.COL_EMP_MAIL, SchemaDB.COL_EMP_PHO, SchemaDB.COL_EMP_KIN);
             PreparedStatement preparedStatement = connection.prepareStatement(Psquery);
-            preparedStatement.setString(1,"BorjaPS");
-            preparedStatement.setString(2,"MartinPS");
-            preparedStatement.setString(3,"correo@PS.com");
-            preparedStatement.setInt(4,123123);
+            preparedStatement.setString(1,empleado.getNombre());
+            preparedStatement.setString(2,empleado.getApellido());
+            preparedStatement.setString(3,empleado.getCorreo());
+            preparedStatement.setInt(4,empleado.getTelefono());
+            preparedStatement.setInt(5,6);
             preparedStatement.executeUpdate();
 
             /*String query = "INSERT INTO " + SchemaDB.TAB_EMP +
@@ -72,6 +70,31 @@ public class Concesionario {
         }
 
         return 0;
+    }
+
+    // lectura
+    public void leerUsuarios(int tipo){
+        // no se puede mapear de forma directa -> Vector[[nombre, apellido, correo],[nombre, apellido, correo]]
+        // Connection -> Statement / PrepareStatement -> executeQuery -> ResultSet
+        Connection connection = new DBConnecion().getConnection();
+        // SELECT * FROM empleado WHERE ID=7;
+        String query = String.format("SELECT * FROM %s WHERE %s=?",SchemaDB.TAB_EMP,SchemaDB.COL_EMP_KIN);
+        PreparedStatement preparedStatement;
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1,tipo);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            //  v
+            //  R,R,R,R,R
+            while (resultSet.next()){
+                String nombre = resultSet.getString(SchemaDB.COL_EMP_NAME);
+                String correo = resultSet.getString(SchemaDB.COL_EMP_MAIL);
+                int tipo1 = resultSet.getInt(SchemaDB.COL_EMP_KIN);
+                System.out.printf("Nombre del empleado %s\n\tCorreo del empleado %s\n\tTipo del empleado %s\n",nombre,correo,tipo1);
+            }
+        } catch (SQLException e) {
+            System.out.println("error en la query");
+        }
     }
 
 }

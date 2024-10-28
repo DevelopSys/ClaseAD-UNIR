@@ -15,6 +15,7 @@ public interface SchemaDB {
     String COL_CH_CV = "cv";
     String TAB_KIN = "tipos";
     String COL_ID = "id";
+    String COL_EMP_SALE = "ventas";
     String COL_EMP_NAME = "nombre";
     String COL_EMP_SURNAME = "apellido";
     String COL_EMP_MAIL = "correo";

@@ -63,5 +63,10 @@ public class CochesDAO {
         return new Coche(marca,modelo,cv,precio);
     }
 
+    public void realizarVenta(int id){
+        // DELETE -> WHERE id= id
+        // UPDATE -> estado = false WHERE id= id
+    }
+
 
 }

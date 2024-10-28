@@ -23,4 +23,16 @@ public class Empleado {
         this.telefono = telefono;
         this.tipo = tipo;
     }
+
+    public Empleado(String nombre, String apellido) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
+    public void mostrarDatos() {
+        System.out.println("nombre = " + nombre);
+        System.out.println("apellido = " + apellido);
+    }
 }
+
+

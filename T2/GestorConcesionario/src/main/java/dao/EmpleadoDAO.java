@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class EmpleadoDAO {
 
@@ -33,6 +34,28 @@ public class EmpleadoDAO {
         preparedStatement.setInt(3, empleado.getTelefono());
         preparedStatement.setString(4, empleado.getCorreo());
         preparedStatement.setInt(5, empleado.getTipo().getId());
+        preparedStatement.execute();
+    }
+
+    public void obtenerEmpleadoMes(int numero) throws SQLException {
+        String query = "SELECT * FROM %s ORDER BY %s DESC LIMIT ?";
+        preparedStatement = connection.prepareStatement(String.format(query,SchemaDB.COL_EMP_SALE));
+        preparedStatement.setInt(1, numero);
+        resultSet = preparedStatement.executeQuery();
+
+        while (resultSet.next()){
+            String nombre = resultSet.getString(SchemaDB.COL_EMP_NAME);
+            String apellido = resultSet.getString(SchemaDB.COL_EMP_SURNAME);
+            Empleado empleado = new Empleado(nombre,apellido);
+            empleado.mostrarDatos();
+        }
+    }
+
+    public void realizarVenta(int id) throws SQLException {
+        String query = "UPDATE %s SET %s = %s+1 WHERE %s = ?";
+        preparedStatement = connection.prepareStatement(String.format(query,SchemaDB.TAB_EMP,
+                SchemaDB.COL_EMP_SALE,SchemaDB.COL_EMP_SALE, SchemaDB.COL_ID));
+        preparedStatement.setInt(1,id);
         preparedStatement.execute();
     }
 

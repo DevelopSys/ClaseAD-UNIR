@@ -2,6 +2,7 @@ package controller;
 
 import dao.CochesDAO;
 import dao.EmpleadoDAO;
+import dao.VentaDAO;
 import database.DBConnecion;
 import database.SchemaDB;
 import model.Coche;
@@ -28,10 +29,12 @@ public class Concesionario {
     // insertar trabajador
     private EmpleadoDAO empleadoDAO;
     private CochesDAO cochesDAO;
+    private VentaDAO ventaDAO;
 
     public Concesionario() {
         empleadoDAO = new EmpleadoDAO();
         cochesDAO = new CochesDAO();
+        ventaDAO = new VentaDAO();
     }
 
     public void insertarTrabajadorDAO(Empleado empleado) {
@@ -118,6 +121,7 @@ public class Concesionario {
             System.out.println("error en la query");
         }
     }
+
     public void agregarCoche() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Introduce marca");
@@ -125,7 +129,7 @@ public class Concesionario {
 
 
         try {
-            if (cochesDAO.getModeloCochesMarca(marca).size() <2){
+            if (cochesDAO.getModeloCochesMarca(marca).size() < 2) {
                 System.out.println("Introduce modelo");
                 String modelo = scanner.next();
                 System.out.println("Que caballos tiene");
@@ -143,12 +147,13 @@ public class Concesionario {
             // guardar el dato en un fichero -> DAO
         }
     }
-    public void filtrarPrecio(){
+
+    public void filtrarPrecio() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Por que precio quieres filtrar");
         int precio = scanner.nextInt();
         try {
-            for ( Coche coche : cochesDAO.getCochePrecio(precio)) {
+            for (Coche coche : cochesDAO.getCochePrecio(precio)) {
                 // mostrar los datos de los coches resultantes en la consola
                 coche.mostrarDatos();
             }
@@ -161,5 +166,34 @@ public class Concesionario {
     // tener la funcionalidad de vender un coche -> matricula
     // y el coche lo vende un vendedor (tengo que decir quien lo vender)
     // tener la funcionalidad de cual es el vendedor que mas coches ha vendido
+    public void realizarVenta() {
+        System.out.println("Dime el coche que vas a vender");
+        // pedido por scanner
+        int idCoche = 0;
+        System.out.println("Dime el vendedor que hace la venta");
+        int idEmpleado = 0;
+        try {
+            // el coche que estar vendiendo esta disponible?
+            // si no esta disponible haz XXXXX
+            // buscar un coche con las mismas caracteristicas de cv y precio
+            // si esta disponible, procede a registrar la venta
+            // cochesDAO.realizarVenta(1);
+            // empleadoDAO.realizarVenta(1);
+            ventaDAO.realizarVenta(idEmpleado, idCoche);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void mostrarEmpleadosMes(int numero) {
+        System.out.println("Dime cuantos quieres sacar");
+        int numeroEmpleados = 0;
+        try {
+            empleadoDAO.obtenerEmpleadoMes(3);
+        } catch (SQLException e) {
+            System.out.println("Error a la hora de obtenerlos");
+            System.out.println("Quieres hacer XXX");
+        }
+    }
 
 }

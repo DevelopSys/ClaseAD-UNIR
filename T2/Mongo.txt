@@ -1,0 +1,90 @@
+database
+	collection - tablas
+		documents - json - registros
+			claves -> vales - columnas
+		{title
+		year
+		rating}
+
+		{title
+		year
+		popularity
+		}
+
+
+
+		no son fijos
+	collection
+
+Ejecuciones - query
+
+show dbs -> muestra todas las bases de datos
+use sample_mflix -> utilizar una base de datos
+show collections -> ver todas las collections disponibles 
+
+CRUD CREATE READ UPDATE DELETE
+
+Read -> find
+db.movies.find() -> todos los elementos de la coleccion indicada
+db.movies.findOne() -> primer elemento que coincida
+
+busqueda con criterio
+
+find/findOne({campo:valor})
+db.movies.find({year:1990})
+
+find/findOne({campo:valor},{campo:1})
+db.movies.findOne({year:1990},{title:1})
+
+comparadores: lt menor que
+				lte menor o igual
+				gt mayor que
+				gte mayor o igual
+				eq igual
+				ne diferente
+db.movies.find({year:{$gt:1990}},{title:1})
+db.movies.find({year:{$gt:2000,$lt:2005}},{title:1,year:1})
+
+CREATE -> insert
+db.movies.insert({clave: valor},{clave:valor}) -> registros unicos, se pueden repetir dos elementos con la misma estructura, pero tienen diferente _id: Object()
+
+db.movies.insertMany([{title: "Programacion multimedia: la pelicula de android", year: 2025,rating:6.8},{title: "PSP:Los procesos", year:2025, rating:7.2},{title: "SGE: Odoo y sus cosas", rating:8.5, year:2025}]) -> para poder hacer una insercion multiple []
+
+UPDATE -> db.movies.updateMany/updateOne({concicion_update:valor},{lo_que_actualizo})
+db.movies.updateMany({title:"Desarrollo de interfaces"},{$set:{profesor:"Borja Martin"}})
+db.movies.updateMany({title:"Desarrollo de interfaces"},{$push:{conocimientos:"AWT"}})
+
+DELETE -> db.movies.deleteOne/deleteMany({condicion_borrado:2222})
+
+que relaciones necesito en la bbdd de una tienda de ropa
+
+producto - pedidos - clientes
+
+collecion clientes
+
+collection productos
+	{
+		objectId
+	}
+	{
+		objectId
+	}
+	{
+		objectId
+	}
+	{
+		objectId
+	}
+
+collection pedidos
+	{
+		objectId()
+		productos [234567890,0987654,9876543]
+		cliente: 23456789
+	}
+
+
+
+
+
+

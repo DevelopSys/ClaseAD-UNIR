@@ -16,6 +16,13 @@ public class Usuario {
     private String correo;
     private String pass;
 
+
+    public Usuario(String nombre, String correo, String pass) {
+        this.nombre = nombre;
+        this.correo = correo;
+        this.pass = pass;
+    }
+
     public void mostrarDatos(){
         System.out.println("Nombre "+nombre);
         System.out.println("Apellido "+apellido);

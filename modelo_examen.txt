@@ -1,0 +1,149 @@
+mongo nosql
+	no tiene tablas
+
+colecciones
+	documentos -> JSON() {clave : valor} -> no tienen porque tener la misma estructura
+
+{"clave","valor"}
+Document().apped("clave","valor")
+
+C -> 
+objectId de cada uno de los elementos insertados
+({documento_insercion})
+db.collection.insert({"nombre":"Borja","edad":40, "asignatura":"AD"})
+insertMany([{"nombre":"Borja","edad":40, "asignatura":"AD"},{"nombre":"Borja","edad":40, "asignatura":"AD"},{"nombre":"Borja","edad":40, "asignatura":"AD"}])
+
+R -> los elementos que cumplen una condicion de busqueda
+({documento_busqueda}{documento mostrar}).sort({documento_ordenacion})
+db.collection.find()
+db.collection.find({nombre:"Borja", edad: 40})
+
+// gt -> mayor que
+// gte -> mayor o igual que
+// lt -> menor que
+// lte -> menor o igual que
+// eq -> igual
+// neq -> diferente
+db.collection.find({nombre:"Borja", edad: {$gt:20, $lte:40}}) (20,40]
+[{nombre:"",apellido:"",edad:23,asignaturas:[]},{nombre:"",apellido:"",edad:23,asignaturas:[]}]
+db.collection.find({nombre:"Borja", edad: {$gt:20, $lte:40}},{nombre:1,apellido:1}) (20,40]
+[{nombre:"",apellido:""},{nombre:"",apellido:""}]
+db.collection.find({},{nombre:1,apellido:1}) (20,40]
+db.collection.find({},{nombre:1,apellido:1}).sort({edad:-1}).limit(1)
+
+U -> cambia un valor en todos los elementos que cumplan el filtro de busqueda
+me da el conjunto de elementos que han sido cambiados
+update
+({documento_busqueda},{documento_cambio})
+db.collection.update({nombre:"Borja", edad: {$gte:20, $lte:40}},{$set:{aprobado:true}})
+
+D -> elimina todos aquellos elementos que cumplen el filtro de busqueda
+delete
+({documento_busqueda})
+
+db.collection.delete({edad:{$lt:18}})
+db.collection.find({},{nombre:1,apellido:1}).sort({edad:-1}).limit(1)
+
+db.collection.insertMany({"nombre":"Borja","edad":40, "asignatura":"AD"},{"nombre":"Borja","edad":40, "asignatura":"AD"},{"nombre":"Borja","edad":40, "asignatura":"AD"})
+
+la respuesta es: 
+
+> error
+los object id de los insertados
+solo inserta el primero
+solo inserta el ultimo
+
+a la hora de guardar documento dentro de una coleccion, estos tienen que cumplir
+
+- que tienen un indice obligatorio
+- que tienen que tener la misma esctructura
+>- que guardan un formato de JSON
+- cualquiera de las anteriores
+
+a la hora de conectarme con una base de datos oracle y utilizar jdbc, indica cual de las siguientes opciones es la correcta
+
+> - Se puede utilizar prepareStatement
+- no se puede utilizar resultst
+- hay que utilizar jdbc:mysql://URL
+- hay que descargar un driver adicional (libreria de maven)
+
+a la hora de utilizar una transaccion de datos de tipo lectura es recomendable utilizar
+
+- statement y preparestatement
+- statement y resultset
+> - preparestatement y resultset
+- es indiferente
+
+a la hora de analizar un conjunto de resultados, el método que permite indicar si hay es: 
+
+- hasMoreElement()
+- nextElement()
+> - next()
+- element()
+
+A la hora de trabajar con flujo de datos, si quiero leer un objeto, es necesario
+
+- que el modelo sea serializado
+- que el modelo tenga un constructor vacio
+- que el modelo tenga un atributo final static serialVersionUID
+> - todas las anteriores
+
+a la hora de hacer una lectura de texto plano, el método de lectura es read, pero este me retorna:
+
+> - un int (char) 43
+- un char
+- un string
+- cualquiera de las anteriores
+
+Si quiero hacer una escritura en texto plano, en el caso de ejecutar el codigo wr.write(43), en el fichero se guarda
+
+- 43
+- "43"
+> - t
+- ninguna de las anteriores
+
+En el caso de querer guardad un numero dentro de un fichero, es necesario utilizar el siguiente flujo de datos:
+
+- FileWriter
+> - DataOutput
+- ObjectOutput
+- Cualquier da los anteriores
+
+Para que se utiliza la libreria Gson
+
+> - para parsear objetos que vienen de un json
+- para convertir un json en string
+- para converir un string en json
+- para pasar un json a jsonObject
+
+Cuando hacemos un flujo de datos de tipo texto plano, en el caso de querer leer de forma completa un fichero con bufferedreader, debemos utilizar la siguiente estructura de control (con el método readLine):
+
+> - while
+- do while
+- for
+- foreach
+
+asd
+asd
+asd
+asd
+
+String linea;
+StringBuffer st = new StringBuffer()
+
+while((linea = br.readLine())!=null){
+	st.append(linea)
+}
+
+sout(linea)
+
+do{
+	linea = br.readLine()
+	sout(linea)
+}
+
+
+
+org.json 
+
+

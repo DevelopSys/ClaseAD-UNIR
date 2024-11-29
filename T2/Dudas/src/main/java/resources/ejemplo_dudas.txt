@@ -1,0 +1,10 @@
+Esto es un ejemplo de escritura1
+Esto es un ejemplo de escritura2
+Esto es un ejemplo de escritura3
+Esto es un ejemplo de escritura4
+Esto es un ejemplo de escritura1
+Esto es un ejemplo de escritura2
+Esto es un ejemplo de escritura3
+Esto es un ejemplo de escritura4
+Esto es una linea con BW
+Esta linea va con PW

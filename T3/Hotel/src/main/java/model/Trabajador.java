@@ -29,10 +29,26 @@ public class Trabajador implements Serializable {
     @Column
     private int telefono;
 
+
+    public Trabajador(int id) {
+        this.id = id;
+    }
+
     public Trabajador(String nombre, String apellido, String direccion, int telefono) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
         this.telefono = telefono;
+    }
+
+    @Override
+    public String toString() {
+        return "Trabajador{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", telefono=" + telefono +
+                '}';
     }
 }

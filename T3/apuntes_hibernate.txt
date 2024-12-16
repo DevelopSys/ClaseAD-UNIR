@@ -1,0 +1,51 @@
+programa        orm - hibernate - HQL      		base de datos
+				driver mysql		configuracion (XML)
+
+		objeto							SQL
+
+
+OBJECTO -> CLASS		->				TABLA
+Trabajador								empleados (name, surname, mail, phone)
+
+
+sessionfactory -> connection
+session -> currentSession
+begintransaction 
+	save - persist s.persist(new Trabajador(""))
+	get
+	update
+	delete
+commit -> autoCommit(true)
+close 
+
+1 creo el modelo de datos
+
+Clase Trabajador
+
+Los modelos deben cumplir:
+
+- todos los atributos privados
+- constructor con todo y sin vacio
+- la clase tiene que ser serializable
+- getter y setter
+
+Anotaciones
+@Entity -> esto ira a una tabla
+@Table -> a la tabla con el nombre de la clase
+@Column -> el atributo va a la columna con su nombre
+@Id -> el atributo va al PK de la base de datos
+@GeneratedValue -> indica que el campo es generado auto en base de datos
+
+2. creo un archivo de configuracion para la bd y hibernate // TODO mapeo
+con el nombre hibernate.cfg.xml 
+como se conecta hibernate con la base de datos y como se traducen los modelos
+
+
+3. Crear un singleton con la creacion del SessionFactory
+
+4. Crear la sesion y transacciones
+
+
+
+
+

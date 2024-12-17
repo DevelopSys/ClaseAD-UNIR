@@ -9,14 +9,22 @@ Trabajador								empleados (name, surname, mail, phone)
 
 
 sessionfactory -> connection
+	new Hibertnae().getSessionFactory() -> una copia del session factori actual -> con las configuraciones del archivo
 session -> currentSession
+	sessionFactory.getCurrentSession();
 begintransaction 
-	save - persist s.persist(new Trabajador(""))
-	get
-	update
-	delete
+	session.beginTransaction();
+		save - persist s.persist(new Trabajador(""))
+		get - s.get(clase_mapeo,id) -> un objeto del tipo clase mapeo
+		merge -> primero obtengo un objeto (get) luego actualizo el objeto y por ultimo utilizo un update
+		delete -> primero obtengo un objeto (get) luego actualizo el objeto y por ultimo utilizo un delete. En este caso puedo utilizar un objeto con constructor unica y exclusivamente de id
+
 commit -> autoCommit(true)
 close 
+
+// SI QUIERO ACCIONES MÁS AVANZADAS, NECESITO CREAR HQL -> Query
+// seleccion multiple
+Query<clase_mapeo> = s.createQuery("HQL",clase_mapeo)
 
 1 creo el modelo de datos
 

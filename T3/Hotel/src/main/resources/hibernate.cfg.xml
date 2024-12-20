@@ -8,5 +8,8 @@
         <property name="connection.password"></property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <mapping class="model.Trabajador"/>
+        <mapping class="model.Direccion"/>
+        <mapping class="model.Habitacion"/>
+        <mapping class="model.Cliente"/>
     </session-factory>
 </hibernate-configuration>

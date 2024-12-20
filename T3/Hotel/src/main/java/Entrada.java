@@ -1,9 +1,17 @@
+import dao.ClienteDAO;
+import dao.HabitacionDAO;
+import dao.TrabajadorDAO;
 import database.HibernateUtil;
+import model.Cliente;
+import model.Direccion;
+import model.Habitacion;
 import model.Trabajador;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.exception.ConstraintViolationException;
 import org.hibernate.query.Query;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -19,7 +27,6 @@ public class Entrada {
                 new Trabajador(scanner.next(),scanner.next(),scanner.next(),scanner.nextInt()));
         session.getTransaction().commit();
         session.close();*/
-
         // obtencion -> select - ps, rs
         /*
         rs = ps.execute()
@@ -60,9 +67,8 @@ public class Entrada {
         session.delete(trabajador);
         session.getTransaction().commit();
         session.close();*/
-
         // seleccion avanzada
-        SessionFactory sessionFactory = new HibernateUtil().getSessionFactory();
+        /*SessionFactory sessionFactory = new HibernateUtil().getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
         // t nomeglqtura para un trabajador
@@ -73,6 +79,32 @@ public class Entrada {
             System.out.println(trabajador);
         }
         session.getTransaction().commit();
-        session.close();
+        session.close();*/
+
+        TrabajadorDAO trabajadorDAO = new TrabajadorDAO();
+        // trabajadorDAO.seleccionHabitacionTrabajador(33);
+        HabitacionDAO habitacionDAO = new HabitacionDAO();
+        // habitacionDAO.getTrabajardorHabitacion(13);
+        ClienteDAO clienteDAO = new ClienteDAO();
+
+        habitacionDAO.getAllClientes(11);
+        // clienteDAO.crearCliente(new Cliente("Maria"),11);
+        //trabajadorDAO.insertarTrabajador(new Trabajador("Borja", "Martin",
+        //        new Direccion("Madrid", "Madrid")
+        //        ,new Direccion("Galicia", "Galicia"),4567),new Habitacion(3,300,3));
+
+        /*for (int i = 10; i < 21; i++) {
+            habitacionDAO.crearHabitacion(new Habitacion(1,i,4));
+        }*/
+
+        /*try{
+        trabajadorDAO.insertarTrabajador(new Trabajador("Borja", "Martin",
+                new Direccion("Madrid", "Madrid")
+                ,new Direccion("Barcelona", "Barcelona"),123));
+        } catch (ConstraintViolationException e){
+            System.out.println("El telefono esta duplicado, quieres indicarme otro");
+        }*/
+        //trabajadorDAO.seleccionarTodosByProvincia("Valencia");
+        // trabajadorDAO.actualizarNombre("Borja");
     }
 }

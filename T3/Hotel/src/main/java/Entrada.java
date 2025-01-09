@@ -87,7 +87,7 @@ public class Entrada {
         // habitacionDAO.getTrabajardorHabitacion(13);
         ClienteDAO clienteDAO = new ClienteDAO();
 
-        habitacionDAO.getAllClientes(11);
+        // habitacionDAO.getAllClientes(11);
         // clienteDAO.crearCliente(new Cliente("Maria"),11);
         //trabajadorDAO.insertarTrabajador(new Trabajador("Borja", "Martin",
         //        new Direccion("Madrid", "Madrid")
@@ -106,5 +106,26 @@ public class Entrada {
         }*/
         //trabajadorDAO.seleccionarTodosByProvincia("Valencia");
         // trabajadorDAO.actualizarNombre("Borja");
+
+        Session session = new HibernateUtil().getSessionFactory().getCurrentSession();
+        session.beginTransaction();
+        Cliente cliente = session.get(Cliente.class,1);
+        Trabajador trabajador = session.get(Trabajador.class,33);
+        cliente.getListaTrabajadores().add(trabajador);
+        trabajador.getListaClientes().add(cliente);
+
+        session.persist(cliente);
+        session.persist(trabajador);
+
+        /*for (Trabajador trabajador : cliente.getListaTrabajadores()) {
+            System.out.println(trabajador.getNombre());
+        }*/
+
+        /*Trabajador trabajador = session.get(Trabajador.class,21);
+        for (Cliente cliente: trabajador.getListaClientes()) {
+            System.out.println(cliente.getNombre());
+        }*/
+        session.getTransaction().commit();
+        session.close();
     }
 }

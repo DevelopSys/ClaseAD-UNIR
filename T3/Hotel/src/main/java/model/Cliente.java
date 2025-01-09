@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Setter
 @Getter
 @AllArgsConstructor
@@ -24,6 +26,12 @@ public class Cliente {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_habitacion")
     private Habitacion habitacion;
+
+    @ManyToMany()
+    @JoinTable(name = "reservas",
+            joinColumns = @JoinColumn(name = "id_cliente")
+            ,inverseJoinColumns = @JoinColumn(name = "id_trabajador"))
+    private List<Trabajador> listaTrabajadores;
 
     public Cliente(String nombre) {
         this.nombre = nombre;

@@ -1,0 +1,103 @@
+programa        orm - hibernate - HQL      		base de datos
+				driver mysql		configuracion (XML)
+
+		objeto							SQL
+
+
+OBJECTO -> CLASS		->				TABLA
+Trabajador								empleados (name, surname, mail, phone)
+
+
+sessionfactory -> connection
+	new Hibertnae().getSessionFactory() -> una copia del session factori actual -> con las configuraciones del archivo
+session -> currentSession
+	sessionFactory.getCurrentSession();
+begintransaction 
+	session.beginTransaction();
+		save - persist s.persist(new Trabajador(""))
+		get - s.get(clase_mapeo,id) -> un objeto del tipo clase mapeo
+		merge -> primero obtengo un objeto (get) luego actualizo el objeto y por ultimo utilizo un update. Solo me vale si lo busco por id
+		delete -> primero obtengo un objeto (get) luego actualizo el objeto y por ultimo utilizo un delete. En este caso puedo utilizar un objeto con constructor unica y exclusivamente de id
+
+commit -> autoCommit(true)
+close 
+
+// SI QUIERO ACCIONES MÁS AVANZADAS, NECESITO CREAR HQL -> Query
+// seleccion multiple
+Query<clase_mapeo> = s.createQuery("HQL",clase_mapeo)
+
+// si las querys son recurrentes -> namedQuery -> llama por su nombre
+
+1 creo el modelo de datos
+
+Clase Trabajador
+
+Los modelos deben cumplir:
+
+- todos los atributos privados
+- constructor con todo y sin vacio
+- la clase tiene que ser serializable
+- getter y setter
+
+Anotaciones
+@Entity -> Esto indica que es un objeto a manejar desde programacion
+@Table -> a la tabla con el nombre de la clase
+@Column -> el atributo va a la columna con su nombre
+@Id -> el atributo va al PK de la base de datos
+@GeneratedValue -> indica que el campo es generado auto en base de datos
+@Embeddable -> indica que la entidad se pondra como propiedad dentro de otra clase
+@Embedded -> indica que el atributo tiene que ser buscado en la clase donde esta defincido (@Embeddable)
+@AttributeOverrides({@AttributeOverride(name="",@Colum(name=""))} -> modifica el atributo y lo lleva a una columna indica
+
+
+2. creo un archivo de configuracion para la bd y hibernate // TODO mapeo
+con el nombre hibernate.cfg.xml 
+como se conecta hibernate con la base de datos y como se traducen los modelos
+
+3. Crear un singleton con la creacion del SessionFactory
+
+4. Crear la sesion y transacciones
+
+
+RELACIONES
+
+1- identificar quien es la entidad dominante -> Trabajador
+2. determino que tipo de relacion es
+	@OnetoOne -> un elemento de la tabla solo se relaciona con un elemento de la otra tabla -> mapeado
+
+	@OnetoMany -> un elemento de la tabla solo se relaciona con mucho elemento de la otra tabla -> mapeado
+
+	@ManytoOne -> Muchos elementos de la tabla solo se relaciona con un elemento de la otra tabla -> mapeado
+
+	@ManytoMany -> Muchos elementos de esta tabla van con muchos elementos de la otra tabla -> Tabla JOIN
+
+2.1 - OnetoOne
+
+	1. En la relacion dominante creo un objeto del tipo relacion
+	Unidireccional
+	@OnetoOne (cascade = Cascade.ALL)
+	@JoinColumn(name="columna con la FK")
+	private Habitacion
+
+	Bidireccional
+	2. En la clase con la relacion no dominante
+	@OnoToOne(mappedBy="nombre_propiedad_relacion_punto1")
+	private Trabajador
+
+2.2 - ManytoOne - OneToMany
+
+	1.En la relacion dominenta creo un objeto del tipo relacion
+	Unidireccional
+	@ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "columna con la FK")
+
+    Bidireccional
+	2. En la clase con la relacion no dominante
+	@OneToMany(mappedBy="nombre_propiedad_relacion_punto1")
+	private List<Cliente>
+
+
+
+
+
+

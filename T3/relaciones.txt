@@ -1,0 +1,59 @@
+@onetoone 
+- unidireccional
+- bidireccional
+
+ClaseA
+@onetoone
+@JoinColumn(name="id_claseB") -> fk en la tabla y que es pk en la tabla claseB
+private ClaseB objeto
+
+ClaseB
+@onetoone (mappedby="objeto") -> nombre del atributo que mapea la relacion en la clase origen
+private ClaseA objeto
+
+ClaseA obj = session.get(ClaseA, 1);
+obj.objeto -> capturaria el elemento con el que me relaciono
+
+@onetomany -> @manytoone
+- unidireccional
+- bidireccional
+
+ClaseA
+@manytoone
+@JoinColumn(name="id_claseB") -> fk en la tabla y que es pk en la tabla claseB
+private ClaseB objeto
+
+ClaseB
+@onetomany(mappedby="objeto") -> nombre del atributo que mapea la relacion en la clase 
+private List<ClaseA> listaClaseA -> un conjunto porque esta clase se puede relacionar con muchas
+
+@manytomany -> 2 JoinTable JoinColumn InverseJoinColumn
+- unidireccional
+- bidireccional
+
+una tercera tabla que actua como relacional
+
+	un empleado puede gestionar muchas reservas donde en cada reserva hay un cliente
+	un cliente puede ser atendido por muchos trabajadores, ya que puede hacer varias reservar
+
+	mucho trabajadores se relacionan con muchos clientes
+
+
+clientes: 1,2,3
+trabajadores: 15,18,21,22,31,33
+
+ClaseA
+@manytomany(EAGER)
+@JoinTable(name="nombre_tabla_auxiliar"
+,joinColumn=@JoinColumn="nombre_fk1",inverseJoinColumn=@JoinColumn="nombre_fk2")
+private List<ClaseB> listado
+
+
+ClaseB
+@manytomany(mappedby="listado", EAGER) -> nombre del atributo que guarda la relacion en la entidad dominante
+private List<ClaseA> listado
+
+1 -> 33
+33 -> 1
+
+

@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -27,6 +28,9 @@ public class Liga implements Serializable {
     private Date fecha_inicio;
     @Column(name = "fecha_fin")
     private Date fecha_final;
+    // bidireccionalidad
+    @OneToMany(mappedBy = "liga")
+    private List<Equipo> equipos;
 
     public Liga(String nombre) {
         this.nombre = nombre;

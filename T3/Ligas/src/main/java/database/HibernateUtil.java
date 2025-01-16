@@ -16,7 +16,7 @@ public class HibernateUtil {
     }
 
     private void createSessionFactory() {
-        sessionFactory = new Configuration().buildSessionFactory();
+        sessionFactory = new Configuration().configure().buildSessionFactory();
 
     }
 

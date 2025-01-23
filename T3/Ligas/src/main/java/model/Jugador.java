@@ -12,6 +12,8 @@ import java.io.Serializable;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@NamedQuery(name = "Jugador.findNacionalidad",query = "FROM Jugador j WHERE j.nacionalidad = :nacionalidad")
+@NamedQuery(name = "Jugador.findAll",query = "FROM Jugador")
 @Entity
 @Table(name = "jugadores")
 public class Jugador implements Serializable {

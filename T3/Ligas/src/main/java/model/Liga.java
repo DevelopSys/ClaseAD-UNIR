@@ -29,7 +29,7 @@ public class Liga implements Serializable {
     @Column(name = "fecha_fin")
     private Date fecha_final;
     // bidireccionalidad
-    @OneToMany(mappedBy = "liga")
+    @OneToMany(mappedBy = "liga", fetch = FetchType.EAGER)
     private List<Equipo> equipos;
 
     public Liga(String nombre) {

@@ -34,7 +34,7 @@ public class Equipo implements Serializable {
     private List<Jugador> jugadores;
 
     // unidireccional
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "id_liga")
     private Liga liga;
 

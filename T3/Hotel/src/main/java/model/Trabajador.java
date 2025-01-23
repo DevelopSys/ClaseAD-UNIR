@@ -15,7 +15,8 @@ import java.util.List;
 @NoArgsConstructor
 
 @NamedQuery(name = "Trabajador.findAll",query = "FROM Trabajador")
-@NamedQuery(name = "Trabajador.findAllByLocalidad",query = "FROM Trabajador t WHERE t.direccion.localidad=:localidad")
+@NamedQuery(name = "Trabajador.findAllByLocalidad"
+        ,query = "FROM Trabajador t WHERE t.direccion.localidad=:localidad")
 @NamedQuery(name = "Trabajador.findAllByProvincia",query = "FROM Trabajador t WHERE t.direccion.provincia=:provincia")
 @NamedQuery(name = "Trabajador.updateName",query = "UPDATE Trabajador t SET t.nombre =:nombre WHERE t.apellido=:apellido")
 

@@ -21,8 +21,18 @@ public class LigasDAO {
 
         session = new HibernateUtil().getSessionFactory().getCurrentSession();
         session.beginTransaction();
+        session.persist(liga);
         session.getTransaction().commit();
         session.close();
 
+    }
+
+    public Liga getLiga(int id){
+        session = new HibernateUtil().getSessionFactory().getCurrentSession();
+        session.beginTransaction();
+        Liga liga = session.get(Liga.class,id);
+        session.getTransaction().commit();
+        session.close();
+        return liga;
     }
 }

@@ -12,5 +12,6 @@
         <mapping class="model.Entrenador"/>
         <mapping class="model.Equipo"/>
         <mapping class="model.Posicion"/>
+        <mapping class="model.Competicion"/>
     </session-factory>
 </hibernate-configuration>

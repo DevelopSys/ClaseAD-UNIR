@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- solo puedo tener un nodo root -->
+<!-- nombre de la base de datos -->
+<libreria id="1" tipo="tecnologia">
+	<libros categoria="ciencia_ficcion">
+		<libro isbn="123A" idioma="en" paginas="123">
+			<titulo>
+				Harry Potter
+			</titulo>
+			<autor>
+				J.K. Rowling
+			</autor>
+			<precio moneda="dol">
+				25.90
+			</precio>
+		</libro>
+		<libro isbn="123A" idioma="es">
+		</libro>
+	</libros>
+	<libros categoria="sociedad">
+	</libros>
+	<revistas categoria="entretenimiento">
+	</revistas>
+	<revistas categoria="pasatiempos">
+		<revista>
+		</revista>
+	</revistas>
+</libreria>

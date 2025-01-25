@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<peliculas>
+	<pelicula titulo="Inception" genero="Ciencia Ficción" director="Christopher Nolan" anio="2010" duracion="148" poster="https://static.wikia.nocookie.net/eswikia/images/0/0f/The_Inception.jpg/revision/latest/scale-to-width-down/1440?cb=20160812201832" puntuacion="8.8">
+		<sinopsis>
+			Un ladrón que roba secretos corporativos a través del uso de la tecnología de sueños compartidos debe realizar la tarea inversa: implantar una idea en la mente de un CEO.
+		</sinopsis>
+		<personajes>
+			<personaje actor="Leonardo DiCaprio">
+				Dom Cobb
+			</personaje>
+			<personaje actor="Joseph Gordon-Levitt">
+				Arthur
+			</personaje>
+			<personaje actor="Ellen Page">
+				Ariadne
+			</personaje>
+		</personajes>
+	</pelicula>
+	<pelicula titulo="The Matrix" genero="Acción" director="The Wachowskis" anio="1999" duracion="136" poster="https://pics.filmaffinity.com/Matrix-155050517-large.jpg" puntuacion="8.7">
+		<sinopsis>
+			Un hacker descubre la aterradora verdad sobre su realidad y su papel en la guerra contra sus controladores.
+		</sinopsis>
+		<personajes>
+			<personaje actor="Keanu Reeves">
+				Neo
+			</personaje>
+			<personaje actor="Laurence Fishburne">
+				Morpheus
+			</personaje>
+			<personaje actor="Carrie-Anne Moss">
+				Trinity
+			</personaje>
+		</personajes>
+	</pelicula>
+	<pelicula titulo="Pulp Fiction" genero="Crimen" director="Quentin Tarantino" anio="1994" duracion="154" poster="https://www.themoviedb.org/t/p/original/dM2w364MScsjFf8pfMbaWUcWrR.jpg" puntuacion="8.9">
+		<sinopsis>
+			Las vidas de dos sicarios, un boxeador, la esposa de un gánster y dos ladrones de poca monta se entrelazan en cuatro historias de violencia y redención.
+		</sinopsis>
+		<personajes>
+			<personaje actor="John Travolta">
+				Vincent Vega
+			</personaje>
+			<personaje actor="Uma Thurman">
+				Mia Wallace
+			</personaje>
+			<personaje actor="Samuel L. Jackson">
+				Jules Winnfield
+			</personaje>
+		</personajes>
+	</pelicula>
+	<pelicula titulo="The Godfather" genero="Drama" director="Francis Ford Coppola" anio="1972" duracion="175" poster="https://www.themoviedb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" puntuacion="9.2">
+		<sinopsis>
+			El patriarca envejecido de una dinastía criminal traslada el control de su imperio clandestino a su hijo menor.
+		</sinopsis>
+		<personajes>
+			<personaje actor="Marlon Brando">
+				Vito Corleone
+			</personaje>
+			<personaje actor="Al Pacino">
+				Michael Corleone
+			</personaje>
+			<personaje actor="James Caan">
+				Sonny Corleone
+			</personaje>
+		</personajes>
+	</pelicula>
+	<pelicula titulo="John Wick" genero="Acción" director="Chad Stahelski" anio="2014" duracion="101" poster="https://www.themoviedb.org/t/p/original/fZPSd91yGE9fCcCe6OoQr6E3Bev.jpg" puntuacion="7.4">
+		<sinopsis>
+			Un exasesino a sueldo busca venganza contra quienes le quitaron todo, desatando una ola de violencia implacable.
+		</sinopsis>
+		<personajes>
+			<personaje actor="Keanu Reeves">
+				John Wick
+			</personaje>
+			<personaje actor="Ian McShane">
+				Winston
+			</personaje>
+			<personaje actor="Halle Berry">
+				Sofia
+			</personaje>
+		</personajes>
+	</pelicula>
+	<pelicula titulo="Django Unchained" genero="Western" director="Quentin Tarantino" anio="2012" duracion="165" poster="https://www.themoviedb.org/t/p/original/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg" puntuacion="8.4">
+		<sinopsis>
+			Con la ayuda de un cazarrecompensas alemán, un esclavo liberado se embarca en una misión para rescatar a su esposa de un brutal terrateniente sureño.
+		</sinopsis>
+		<personajes>
+			<personaje actor="Jamie Foxx">
+				Django
+			</personaje>
+			<personaje actor="Christoph Waltz">
+				Dr. King Schultz
+			</personaje>
+			<personaje actor="Samuel L. Jackson">
+				Stephen
+			</personaje>
+			<personaje actor="Leonardo DiCaprio">
+				Calvin Candie
+			</personaje>
+		</personajes>
+	</pelicula>
+	<pelicula titulo="Inglourious Basterds" genero="Acción" director="Quentin Tarantino" anio="2009" duracion="153" poster="https://www.themoviedb.org/t/p/original/7sfbEnaARXDDhKm0CZ7D7uc2sbo.jpg" puntuacion="8.3">
+		<sinopsis>
+			Un grupo de soldados judíos americanos se embarca en una misión para matar a los líderes nazis durante la Segunda Guerra Mundial.
+		</sinopsis>
+		<personajes>
+			<personaje actor="Brad Pitt">
+				Lt. Aldo Raine
+			</personaje>
+			<personaje actor="Christoph Waltz">
+				Col. Hans Landa
+			</personaje>
+			<personaje actor="Mélanie Laurent">
+				Shosanna Dreyfus
+			</personaje>
+		</personajes>
+	</pelicula>
+	<pelicula titulo="Spectre" genero="Acción" director="Sam Mendes" anio="2015" duracion="148" poster="https://www.themoviedb.org/t/p/original/1n9D32o30XOHMdMWuIT4AaA5ruI.jpg" puntuacion="6.8">
+		<sinopsis>
+			James Bond descubre una organización secreta llamada Spectre y se enfrenta a un enemigo del pasado.
+		</sinopsis>
+		<personajes>
+			<personaje actor="Daniel Craig">
+				James Bond
+			</personaje>
+			<personaje actor="Christoph Waltz">
+				Ernst Stavro Blofeld
+			</personaje>
+			<personaje actor="Léa Seydoux">
+				Madeleine Swann
+			</personaje>
+		</personajes>
+	</pelicula>
+	<!-- Películas adicionales -->
+	<pelicula titulo="The Revenant" genero="Aventura" director="Alejandro González Iñárritu" anio="2015" duracion="156" poster="https://www.themoviedb.org/t/p/original/sm2pvoU4ioK29vGlVZZsOCgyHJ1.jpg" puntuacion="8.0">
+		<sinopsis>
+			Un explorador estadounidense en el siglo XIX lucha por sobrevivir tras ser atacado por un oso y abandonado por su equipo.
+		</sinopsis>
+		<personajes>
+			<personaje actor="Leonardo DiCaprio">
+				Hugh Glass
+			</personaje>
+			<personaje actor="Tom Hardy">
+				John Fitzgerald
+			</personaje>
+		</personajes>
+	</pelicula>
+	<pelicula titulo="Kill Bill: Vol. 1" genero="Acción" director="Quentin Tarantino" anio="2003" duracion="111" poster="https://www.themoviedb.org/t/p/original/dM2w364MScsjFf8pfMbaWUcWrR.jpg" puntuacion="8.1">
+		<sinopsis>
+			Una asesina, que ha sido traicionada por su jefe, busca venganza contra quienes intentaron matarla.
+		</sinopsis>
+		<personajes>
+			<personaje actor="Uma Thurman">
+				The Bride
+			</personaje>
+			<personaje actor="David Carradine">
+				Bill
+			</personaje>
+		</personajes>
+	</pelicula>
+	<pelicula titulo="The Departed" genero="Crimen" director="Martin Scorsese" anio="2006" duracion="151" poster="https://www.themoviedb.org/t/p/original/lC5d2oV7s2ybQlb1luQYgn6n3h3.jpg" puntuacion="8.5">
+		<sinopsis>
+			Un policía infiltrado intenta descubrir la identidad de un gánster dentro de la policía mientras un gánster infiltrado hace lo mismo dentro de la policía.
+		</sinopsis>
+		<personajes>
+			<personaje actor="Leonardo DiCaprio">
+				Billy Costigan
+			</personaje>
+			<personaje actor="Matt Damon">
+				Colin Sullivan
+			</personaje>
+			<personaje actor="Jack Nicholson">
+				Frank Costello
+			</personaje>
+		</personajes>
+	</pelicula>
+	<pelicula titulo="Once Upon a Time in Hollywood" genero="Comedia" director="Quentin Tarantino" anio="2019" duracion="161" poster="https://www.themoviedb.org/t/p/original/qjlmrT0hGfwdNxykV2gbLhtb7j.jpg" puntuacion="7.6">
+		<sinopsis>
+			Los últimos años en Hollywood de un actor de televisión y su doble de acción mientras la industria cinematográfica atraviesa una época de cambios.
+		</sinopsis>
+		<personajes>
+			<personaje actor="Leonardo DiCaprio">
+				Rick Dalton
+			</personaje>
+			<personaje actor="Brad Pitt">
+				Cliff Booth
+			</personaje>
+		</personajes>
+	</pelicula>
+	<pelicula titulo="The Hateful Eight" genero="Western" director="Quentin Tarantino" anio="2015" duracion="168" poster="https://www.themoviedb.org/t/p/original/bKicW8Gkgzbb5v2oZx2sfibcxS0.jpg" puntuacion="7.8">
+		<sinopsis>
+			Ocho extraños se ven atrapados en una cabaña durante una tormenta de nieve, donde sus oscuros secretos son desvelados.
+		</sinopsis>
+		<personajes>
+			<personaje actor="Samuel L. Jackson">
+				Major Marquis Warren
+			</personaje>
+			<personaje actor="Kurt Russell">
+				John Ruth
+			</personaje>
+		</personajes>
+	</pelicula>
+	<pelicula titulo="The Dark Knight" genero="Acción" director="Christopher Nolan" anio="2008" duracion="152" poster="https://www.themoviedb.org/t/p/original/nlDeM8p7LF9Xz4GFX0mXB9xwYt.jpg" puntuacion="9.0">
+		<sinopsis>
+			Batman debe enfrentarse al Joker, un criminal que quiere sumergir a Gotham City en el caos.
+		</sinopsis>
+		<personajes>
+			<personaje actor="Christian Bale">
+				Bruce Wayne
+			</personaje>
+			<personaje actor="Heath Ledger">
+				Joker
+			</personaje>
+		</personajes>
+	</pelicula>
+</peliculas>

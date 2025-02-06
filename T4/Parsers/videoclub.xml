@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<videoclub>
+    <pelicula categoria="Accion" titulo="Titulo de la pelicula" valoracion="5.3">
+        <sinopsis>Esta es la sinopsis de la pelicula de este nodo</sinopsis>
+    </pelicula>
+</videoclub>

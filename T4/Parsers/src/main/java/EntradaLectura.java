@@ -9,7 +9,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 
-public class Entrada {
+public class EntradaLectura {
 
     public static void main(String[] args) {
         // gestor

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <peliculas>
-	<pelicula titulo="Inception" genero="Ciencia Ficción" director="Christopher Nolan" anio="2010" duracion="148" poster="https://static.wikia.nocookie.net/eswikia/images/0/0f/The_Inception.jpg/revision/latest/scale-to-width-down/1440?cb=20160812201832" puntuacion="8.8">
+	<pelciula titulo="Inception" genero="Ciencia Ficción" director="Christopher Nolan" anio="2010" duracion="148" poster="https://static.wikia.nocookie.net/eswikia/images/0/0f/The_Inception.jpg/revision/latest/scale-to-width-down/1440?cb=20160812201832" puntuacion="8.8">
 		<sinopsis>
 			Un ladrón que roba secretos corporativos a través del uso de la tecnología de sueños compartidos debe realizar la tarea inversa: implantar una idea en la mente de un CEO.
 		</sinopsis>
@@ -15,7 +15,7 @@
 				Ariadne
 			</personaje>
 		</personajes>
-	</pelicula>
+	</pelciula>
 	<pelicula titulo="The Matrix" genero="Acción" director="The Wachowskis" anio="1999" duracion="136" poster="https://pics.filmaffinity.com/Matrix-155050517-large.jpg" puntuacion="8.7">
 		<sinopsis>
 			Un hacker descubre la aterradora verdad sobre su realidad y su papel en la guerra contra sus controladores.

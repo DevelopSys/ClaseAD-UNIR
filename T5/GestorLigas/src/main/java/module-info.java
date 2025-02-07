@@ -4,4 +4,6 @@ module org.example.gestorligas {
 
     opens org.example.gestorligas to javafx.fxml;
     exports org.example.gestorligas;
+    opens org.example.gestorligas.controller to javafx.fxml;
+    exports org.example.gestorligas.controller;
 }

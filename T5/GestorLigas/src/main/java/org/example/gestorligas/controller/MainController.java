@@ -4,15 +4,22 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
 import javafx.scene.input.KeyCombination;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import org.example.gestorligas.LigasApp;
 import org.example.gestorligas.dao.JugadorDAO;
 import org.example.gestorligas.model.Jugador;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -67,6 +74,23 @@ public class MainController implements Initializable {
             alert.setTitle("Ayuda");
             alert.showAndWait();
         });
+        menuAnadir.setOnAction(event -> {
+            FXMLLoader loader = new FXMLLoader(LigasApp.class.getResource("detail-view.fxml"));
+            try {
+                Parent root = loader.load();
+                // setData -> necesito una
+                DetailController detailController = loader.getController();
+                detailController.setData(this);
+                Scene scene = new Scene(root);
+                Stage stage = new Stage();
+                stage.setScene(scene);
+                stage.initModality(Modality.WINDOW_MODAL);
+                stage.initOwner(btnVolver.getScene().getWindow());
+                stage.showAndWait();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
         btnVolver.setOnAction(event -> {
 
             Jugador jugador= tabla.getSelectionModel().getSelectedItem();
@@ -86,5 +110,9 @@ public class MainController implements Initializable {
         listaJugadores = FXCollections.observableArrayList();
         listaJugadores.addAll(jugadorDAO.getAllJugadores());
         tabla.setItems(listaJugadores);
+    }
+
+    public void agregarJugador(Jugador j){
+        listaJugadores.add(j);
     }
 }

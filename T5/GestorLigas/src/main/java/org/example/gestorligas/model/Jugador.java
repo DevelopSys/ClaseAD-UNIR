@@ -30,9 +30,6 @@ public class Jugador implements Serializable {
     @Column (name = "valor_mercado")
     private int valorMercado;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "id_equipo")
-    private Object equipo;
 
     @Column
     private int goles;

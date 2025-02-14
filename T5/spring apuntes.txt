@@ -1,0 +1,39 @@
+CLIENTE(java) -> SERVIDOR WEB (JDBC ORM SpringBoot) -> BASE DATOS(MySQL - Mongo)
+
+nodejs-> express
+py-> Flask
+php -> laravel
+java -> springboot
+
+- jdbc:oracle://localhost/dabase
+	- Hibernate
+	- Mongose 
+
+insercion   -> INSERT INTO usuarios (nombre, apellido, correo) VALUES ('Borja','Martin','borja@gmail')
+			-> session.persist(new Usuario("datos"))
+			-> http://localhost:8080/usuarios/add -> body {nombre:"Borja",apellido:"Martin",correo:"borja@gmail"}
+			-> http://localhost:8080/usuarios/all
+			-> http://localhost:8080/usuarios/get
+			-> http://localhost:8080/usuarios/update
+			-> http://localhost:8080/ligas/get
+
+controller -> las clases que permiten gestionar las peticiones de red
+				@RestController
+				@RequestMapping("usuarios")
+
+
+				@Autowired Servicio
+				
+				@Getmapping("all")
+
+model -> los objetos que trabaja el programa @Entity @Table @OneToOne
+
+repository -> interfaz con los metodos "base" de la base de datos
+
+servicio -> @Service
+			Service la logica de la app (solo la firma de los metodos) 
+			ServiceImp la logica de ya todos los metodos escritos
+
+
+
+

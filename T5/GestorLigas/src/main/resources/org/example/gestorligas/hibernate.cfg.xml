@@ -5,6 +5,7 @@
         <property name="connection.username">root</property>
         <property name="connection.password"></property>
         <property name="connectio.driver_class">com.mysql.jdbc.Driver</property>
-        <mapping class="org.example.gestorligas.model.Usuario"></mapping>
+        <mapping class="org.example.gestorligas.model.Usuario"/>
+        <mapping class="org.example.gestorligas.model.Jugador"/>
     </session-factory>
 </hibernate-configuration>

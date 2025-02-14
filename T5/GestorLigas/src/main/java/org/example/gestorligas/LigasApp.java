@@ -11,7 +11,7 @@ public class LigasApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader =
-                new FXMLLoader(LigasApp.class.getResource("login-view.fxml"));
+                new FXMLLoader(LigasApp.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Hello!");
         stage.setScene(scene);

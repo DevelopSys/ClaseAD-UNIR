@@ -5,6 +5,8 @@ import com.example.LigasAPI.repository.LigaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class LigaServiceImp implements LigaService {
 
@@ -24,4 +26,10 @@ public class LigaServiceImp implements LigaService {
         return ligaRepository.save(liga);
 
     }
+
+    @Override
+    public List<Liga> getAllLigas() {
+        return ligaRepository.findAll();
+    }
+
 }

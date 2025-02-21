@@ -5,11 +5,11 @@ package com.example.LigasAPI.controller;
 import com.example.LigasAPI.model.Liga;
 import com.example.LigasAPI.service.LigaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 
 
 @RestController
@@ -24,10 +24,16 @@ public class LigaController {
         return "Error en la app";
     }
 
+    // TODO pendiente de agregar de forma params
     @PostMapping("add")
-    public String addLiga(){
-        ligaService.agregarLiga(new Liga("LigaNueva"));
-        return "Liga agregada correctamente";
+    public String addLiga(@RequestBody Liga liga){
+        ligaService.agregarLiga(liga);
+        return "Liga agregada correctamente con nombre "+liga.getNombre();
+    }
+
+    @GetMapping("getAll")
+    public ResponseEntity<List<Liga>> getLigas(){
+        return new ResponseEntity<>(ligaService.getAllLigas(),HttpStatus.OK);
     }
 
 }

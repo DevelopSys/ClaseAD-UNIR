@@ -15,4 +15,5 @@ import java.util.List;
 // list
 // get -> id
 public interface LigaRepository extends JpaRepository<Liga, Integer> {
+
 }

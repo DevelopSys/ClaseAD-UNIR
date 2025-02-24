@@ -34,6 +34,18 @@ servicio -> @Service
 			Service la logica de la app (solo la firma de los metodos) 
 			ServiceImp la logica de ya todos los metodos escritos
 
+queryParams
 
+https//miapi.com/users/add?nombre="asdasdasd"&apellido="asdasdasd" -> requestParams // queryParams -> busquedas, filtros -> poco seguros
+
+
+body params
+https//miapi.com/users/add -> bodyParams -> inserciones, borrados, updates -> muy seguro
+
+LOS METODOS QUE VAN CONTRA BASE DE DATOS -> repositorio -> CRUD
+
+1- creo método en repositorio (o no, porque si ya esta crado)
+2- creo el método de la logica en el servicio
+3- implemento el metodo el la clase que implementa el servicio (aqui pongo la logica y utilizo el respository)
 
 

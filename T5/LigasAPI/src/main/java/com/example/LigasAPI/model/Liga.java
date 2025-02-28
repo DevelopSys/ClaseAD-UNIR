@@ -10,8 +10,6 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "ligas")
 public class Liga {
@@ -28,6 +26,7 @@ public class Liga {
 
     @Column (name = "fecha_fin")
     private LocalDate fechaFin;
+
 
     public Liga(String nombre) {
         this.nombre = nombre;
@@ -74,4 +73,6 @@ public class Liga {
     public void setFechaFin(LocalDate fechaFin) {
         this.fechaFin = fechaFin;
     }
+
+
 }

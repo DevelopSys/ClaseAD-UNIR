@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // anotaciones de JPA para el mapeo con la base de datos
@@ -21,18 +22,15 @@ public class UsuarioController {
     public String getError() {
         return "Error en la conexion";
     }
-
     @PostMapping("/add")
     public ResponseEntity<Usuario> addUser(@RequestBody Usuario usuario) {
         return new ResponseEntity<>(usuarioService.insertarUsuario(usuario), HttpStatus.OK);
     }
 
-
     @GetMapping("/getMail")
     public ResponseEntity<List<Usuario>> getUserMail(@RequestParam String correo){
         return new ResponseEntity<>(usuarioService.getUsuarioCorreo(correo), HttpStatus.OK);
     }
-
     @GetMapping("/login")
     public ResponseEntity<Usuario> getUserLogin(@RequestParam String correo, @RequestParam String pass ){
 
@@ -44,5 +42,11 @@ public class UsuarioController {
 
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+    // sacar el json de todos los usuraios de la base de datos
 
+    @GetMapping("/getAll")
+    public ResponseEntity<List<Usuario>> getAllUser(){
+        List<Usuario> lista = usuarioService.getAllUsuarios();
+        return new ResponseEntity<>(lista, HttpStatus.OK);
+    }
 }

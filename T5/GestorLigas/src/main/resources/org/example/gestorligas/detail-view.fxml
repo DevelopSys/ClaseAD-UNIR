@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            fx:controller="org.example.gestorligas.controller.DetailController"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TextField fx:id="editNombre" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <Button fx:id="btnAnadir" mnemonicParsing="false" text="Pulsar" BorderPane.alignment="CENTER" />
+   </bottom>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+   <top>
+      <Label fx:id="textDetail" text="Añadir jugador" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>

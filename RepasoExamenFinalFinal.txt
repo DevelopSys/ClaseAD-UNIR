@@ -1,0 +1,70 @@
+Test -> 15 preguntas - 3
+Preguntas -> 7 4-3 preguntas cortas
+
+1. Ficheros -> txt obj (secuenciales) json
+
+	Streams -> in / out
+	File ->  FileReader (caracter a caracter ASCI) -> BufferedReader (string hasta un salto linea) -> while()
+	File ->  FileWriter (caracter a caracter ASCI) -> BufferedWriter / PrintWriter (string hasta un salto linea) -> while()
+	Objeto -> Serializable, Getter, Setter, AllArgsConstructor, NoArgsConstructor -> serialVersionUID = 123L
+	ObjectOutputStream -> DataOutputStream -> File
+	ObjectInputStream  -> DataInputStream -> File
+	JSON -> org.json [1,2,3,4,5,6,7] -> JSONArray {clave:valor} -> JSONObject -> Gson (pasa de objecto json a java)
+
+2. JBDC -> Conexion con bd SQL (MySQL -> Postgresql -> Oracle)
+	
+	cliente (java): jdbc:mysql://localhost:3306/basedatos + ORM -> base de datos 
+	conexion con un patron sigleton -> no se repita la creacion del objeto
+
+		CreateUpdateDelete -> Connection - Statement / PrepareStatement (parametrizada ? ? ? ?) - execute / executeUpdate
+		Read -> Connection - Statement / PrepareStatement (parametrizada ? ? ? ?) - executeQuery -> resultSet -> while(rs.next())
+
+	NoSQL Mongo -> database -> collection -> documents (JSON). No hay tablas, son colecciones, donde cada una de ellas puede tener documentos con estructuras diferentes dentro de la misma coleccioncion. find/findOne() insert/inserMany() delete/deleteMany() update/updateMany() -> shell -> Conector
+
+3. ORM -> Hiberte
+	cliente (java) -> base datos
+	Hibernate+JDBC
+	Class @anotaciones -> @Entity @Table @Column @Id 
+	@One2One (1:1) -> unidireccional joincolumn - nombre de la colmna donde se guarda la FK / bidireccional - indicar el atributo donde se guarda la relacion
+	@One2Many (1:n) -> unidireccional joincolumn - nombre de la colmna donde se guarda la FK / bidireccional - indicar el atributo donde se guarda la relacion. Lo unico que cambia es en la parte del one el tipo del objeto es un List<ClaseRelacion>
+	un alumno tiene muchas clases
+	@Many2Many -> necesito de forma OBLIGATORIA una tabla auxiliar (asociar las dos PK vestidas de FK)
+	Session -> persist / update / list -> HQL -> NamedQuery @NamedQuery("findAllByMail","asdasdasdasd")
+
+4. Base datos XML 
+	SQL - NOSQL - XML NodoRaiz -> NodosHijos (atributos <detro de las etiquetas> y valores que son los que estan encapsulados dentro del valor de la etiqueta <atributos>valores</>)
+
+	XML -> Pasa a un lenguaje de modelado -> HTML
+	XPath -> Lenguaje de consulta para acceder a los valores o atributos de los nodos. /libreria/libro/@atributo
+																					   /libreria/libro[@attr = 1976 and @attr>2000]
+	XQuery -> es xpath pero potente FLWOR
+
+5. Componentes -> SpringBoot + InterfacesGraficas + Principios de POO
+	SpringBoot -> Modelo de 3 capas -> cliente (java)(C1)->      SRVWEB(jdbc:mysql://localhost:3306/basedatos + ORM + SpringRest)      ->  base de datos (C3)
+
+	a. @Controller @RestController
+	@POST @PUT @GET @DELETE -> cada una de ellas va asociada a un @GetMapping("/getAll") https://127.0.0.1/controller/getAll
+
+	b model
+	class que esta mapeada con HIBERNATE
+
+	c. repositorio -> conjunto de metodos que se pueden hacer sobre la base de datos @JPAREPOSITORY
+
+	d. servicio -> los metodos que realmente se ejecutaran desde el controller. Aqui se crea la logica del mentodo, llamando a los metodos del repositorio
+
+	JavaFX / Swing -> ejecutar programas con UI
+		JavaFX -> MVC -> Grafica (fxml) y Logica (java)
+			Stage (pantalla) Scene (Lo que se muestra en la pantalla) Nodes (los controles finales que interactuan o organizan)
+		Swing -> MVC -> Grafica (java) y Logica (java)
+			JFrame (pantalla) JPane (Lo que se muestra en la pantalla) JComponent (los controles finales que interactuan o organizan)
+
+6. Bases datos OO -> muy en la linea de ORM, sin mapeo -> el resultado final (la base de datos) es un fichero
+
+
+
+
+
+	
+	
+
+

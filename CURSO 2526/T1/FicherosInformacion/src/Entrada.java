@@ -1,7 +1,13 @@
-public class Entrada {
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 
+public class Entrada {
     public static void main(String[] args) {
-        System.out.println("Este ejemplo es para el uso de IDEA Proyect");
-        System.out.println("Este mensaje es para ver como se usa GitDesktop");
+        Operaciones operaciones = new Operaciones();
+        // operaciones.informacionFichero("src/resources/ejemplo1.txt");
+        // operaciones.informacionDirectorio("src/resources");
+        operaciones.escribirFichero("src/resources/escritura.txt");
+
     }
 }

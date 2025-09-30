@@ -1,0 +1,4 @@
+Esto es un ejemplo con print writer
+Esto es una nueva linea
+Esto es un ejemplo con print writer
+Esto es una nueva linea

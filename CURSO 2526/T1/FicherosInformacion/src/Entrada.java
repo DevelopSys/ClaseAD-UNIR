@@ -11,7 +11,9 @@ public class Entrada {
         // operaciones.escrituraSuperior("src/resources/escritura_superior.txt");
         // operaciones.mostrarInfoDirectorios(new File("/Users/borja/Documents/GitHub/ClaseAD-UNIR/CURSO 2526/T1/FicherosInformacion"));
         // operaciones.exportarUsuario("src/resources/usuarios.csv");
-        operaciones.lecturaFichero("src/resources/escritura.txt");
+        //operaciones.lecturaFichero("src/resources/escritura.txt");
+        //operaciones.escribirObjeto("src/resources/usuario.dat");
+        operaciones.leerObjeto("src/resources/usuariossssss.dat");
 
 
     }

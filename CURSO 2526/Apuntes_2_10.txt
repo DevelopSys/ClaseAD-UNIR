@@ -1,0 +1,38 @@
+FileWriter write("asdasdasdasd\n")
+FileWriter write(123)
+FileWriter write('a')
+			write('\n')
+
+PrintWriter print("asdasdasd\n")
+			println("asdasdasd")
+
+BufferedWriter write("asdasdasdasdasd")
+			   newLine()
+
+File f = new File (asdasdasd)
+FileWriter fw = new FileWriter(new File(asdasd),true)
+File f = new File("asdasdasd")
+if (!f.exist()){
+	f.createNewFile()
+}
+
+PrintWriter printWriter = new PrintWriter(new FileWriter(f));
+
+PritWriter -> FileWriter -> File
+
+csv -> leelo -> split(,) -> cada fila [] -> Usuario
+
+Objetos
+
+Usuario -> Fichero -> txt id,nombre,apellido,dni,telefono
+Usuario -> Fichero -> dat EL OBJETO
+
+Escribir
+File (.dat) -> FileOutputStream -> ObjectOutputStream
+int double String boolean Object 
+
+Usuario(id, nombre, apellido) -> attr id attr nombre attr apellido -> Etiqueta 1234L
+
+Leer
+File (.dat) -> FileInputStream -> ObjectInputStream
+Object -> castearlos

@@ -35,4 +35,4 @@ Usuario(id, nombre, apellido) -> attr id attr nombre attr apellido -> Etiqueta 1
 
 Leer
 File (.dat) -> FileInputStream -> ObjectInputStream
-Object -> castearlos
+Object -> castearlos (ArrayList<Usuario>)

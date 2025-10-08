@@ -1,0 +1,16 @@
+txt -> letras palabras NO HAY FORMATO
+	csv -> separado por comas
+	json -> diccionario. valores asociados a claves
+	xml -> lenguaje de etiquetado.
+		transmision de informacion -> rss
+		representar UI -> Android layout.xml
+		crear mi propia estructura -> etiquetas atributos valores
+	html -> lenguaje de etiquetado cerrado
+
+
+	fichero guardan informacion estructurada -> accesible de forma sencia
+
+
+
+este fichero es un texto plano sin mucha chicha
+

@@ -13,8 +13,12 @@ public class Entrada {
         // operaciones.exportarUsuario("src/resources/usuarios.csv");
         //operaciones.lecturaFichero("src/resources/escritura.txt");
         //operaciones.escribirObjeto("src/resources/usuario.dat");
-        operaciones.leerObjeto("src/resources/usuariossssss.dat");
+        // operaciones.leerObjeto("src/resources/usuariossssss.dat");
+        operaciones.importarCSV("src/resources/usuarios.csv");
+        metodoAdicion();
+    }
 
-
+    public static void metodoAdicion(){
+        System.out.println("Adicional");
     }
 }

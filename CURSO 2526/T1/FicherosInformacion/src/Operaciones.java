@@ -198,10 +198,14 @@ public class Operaciones {
         try {
             fis = new FileInputStream(file);
             ois = new ObjectInputStream(fis);
+            ArrayList<Usuario> listadoUSer = (ArrayList<Usuario>) ois.readObject();
+
             Usuario usuario = null;
 
 
+
             while ((usuario = (Usuario) ois.readObject()) != null) {
+
                 System.out.println(usuario.getNombre());
                 System.out.println(usuario.getCorreo());
             }
@@ -218,6 +222,52 @@ public class Operaciones {
             } catch (IOException | NullPointerException e) {
                 System.out.println("Error en el cerrado");
             }
+        }
+    }
+
+    public void importarCSV(String path) {
+        File file = new File(path);
+        BufferedReader br = null;
+        ArrayList<Usuario> listado = new ArrayList<>();
+
+        // size -> tamaño -> 100
+        // listado.get(0)
+        // listado.get(99)
+
+        try {
+            br = new BufferedReader(new FileReader(file));
+            String linea = br.readLine();
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(",");
+                listado.add(new Usuario(Integer.parseInt(datos[0]),
+                        datos[1],
+                        datos[2],
+                        datos[3],
+                        datos[4]));
+            }
+
+            System.out.println("Importados con exito los "+listado.size()+ "usuarios");
+            System.out.println(listado.getLast().getId()+" "+listado.getLast().getCorreo());
+            mostrarUsuarios(listado);
+
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Fichero no encontrado");
+        } catch (IOException e) {
+            System.out.println("Error en la lectura del fichero");
+        } finally {
+            try {
+                br.close();
+            } catch (IOException | NullPointerException e) {
+                System.out.println("Error en el cerrado");
+            }
+        }
+
+    }
+
+    private void mostrarUsuarios(ArrayList<Usuario> lista){
+        for (Usuario usuario: lista) {
+            System.out.println(usuario);
         }
     }
 }

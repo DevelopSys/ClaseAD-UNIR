@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cartelera id="1">
+    <pelicula anio="2010" genero="Ciencia ficción / Acción">
+        <titulo>Inception</titulo>
+        <director>Christopher Nolan</director>
+        <actores>
+            <actor>Leonardo DiCaprio</actor>
+            <actor>Joseph Gordon-Levitt</actor>
+            <actor>Elliot Page</actor>
+        </actores>
+        <cartel>
+            "asdasdasdasdadad"
+        </cartel>
+    </pelicula>
+    <pelicula anio="2008" genero="Acción / Crimen / Drama">
+        <titulo>The Dark Knight</titulo>
+        <director>Christopher Nolan</director>
+        <actores>
+            <actor>Christian Bale</actor>
+            <actor>Heath Ledger</actor>
+            <actor>Gary Oldman</actor>
+        </actores>
+    </pelicula>
+    <pelicula anio="1994" genero="Drama / Romance">
+        <titulo>Forrest Gump</titulo>
+        <director>Robert Zemeckis</director>
+        <actores>
+            <actor>Tom Hanks</actor>
+            <actor>Robin Wright</actor>
+            <actor>Gary Sinise</actor>
+        </actores>
+    </pelicula>
+    <pelicula anio="1994" genero="Drama">
+        <titulo>The Shawshank Redemption</titulo>
+        <director>Frank Darabont</director>
+        <actores>
+            <actor>Tim Robbins</actor>
+            <actor>Morgan Freeman</actor>
+            <actor>Bob Gunton</actor>
+        </actores>
+    </pelicula>
+    <pelicula anio="1972" genero="Crimen / Drama">
+        <titulo>The Godfather</titulo>
+        <director>Francis Ford Coppola</director>
+        <actores>
+            <actor>Marlon Brando</actor>
+            <actor>Al Pacino</actor>
+            <actor>James Caan</actor>
+        </actores>
+    </pelicula>
+    <pelicula anio="2000" genero="Acción / Aventura / Drama">
+        <titulo>Gladiator</titulo>
+        <director>Ridley Scott</director>
+        <actores>
+            <actor>Russell Crowe</actor>
+            <actor>Joaquin Phoenix</actor>
+            <actor>Connie Nielsen</actor>
+        </actores>
+    </pelicula>
+    <pelicula anio="2014" genero="Ciencia ficción / Drama">
+        <titulo>Interstellar</titulo>
+        <director>Christopher Nolan</director>
+        <actores>
+            <actor>Matthew McConaughey</actor>
+            <actor>Anne Hathaway</actor>
+            <actor>Jessica Chastain</actor>
+        </actores>
+    </pelicula>
+    <pelicula anio="1994" genero="Crimen / Drama">
+        <titulo>Pulp Fiction</titulo>
+        <director>Quentin Tarantino</director>
+        <actores>
+            <actor>John Travolta</actor>
+            <actor>Samuel L. Jackson</actor>
+            <actor>Uma Thurman</actor>
+        </actores>
+    </pelicula>
+    <pelicula anio="1999" genero="Ciencia ficción / Acción">
+        <titulo>The Matrix</titulo>
+        <director>Lana Wachowski, Lilly Wachowski</director>
+        <actores>
+            <actor>Keanu Reeves</actor>
+            <actor>Carrie-Anne Moss</actor>
+            <actor>Laurence Fishburne</actor>
+        </actores>
+    </pelicula>
+    <pelicula anio="2019" genero="Drama / Thriller">
+        <titulo>Parasite</titulo>
+        <director>Bong Joon-ho</director>
+        <actores>
+            <actor>Song Kang-ho</actor>
+            <actor>Cho Yeo-jeong</actor>
+            <actor>Choi Woo-shik</actor>
+        </actores>
+    </pelicula>
+</cartelera>

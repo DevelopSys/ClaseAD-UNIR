@@ -1,0 +1,69 @@
+<!-- esto es un comentario de XML -->
+<!-- solo puedo tener un nodo root -->
+<!-- el fichero xml lo forman nodos -->
+<usuarios referencia="1">
+	<!-- todo lo que ponga aqui, será parte de los usuarios -->
+	<!-- un nodo puede tener atributos -->
+	<!-- un nodo puede tener contenido -->
+	<usuario nacionalidad="española" edad="41">
+		<nombre>
+			<!-- un nodo puede tener valor -->
+			Borja
+		</nombre>
+		<apellido>
+			Martin
+		</apellido>
+		<dni>
+			12345A
+		</dni>
+	</usuario>
+	<usuario nacionalidad="francesa" edad="40">
+		<nombre>
+			<!-- un nodo puede tener valor -->
+			Piere
+		</nombre>
+		<apellido>
+			ApellidoPierre
+		</apellido>
+		<dni>
+			12345A
+		</dni>
+	</usuario>
+	<usuario nacionalidad="alemana" edad="30">
+		<nombre>
+			<!-- un nodo puede tener valor -->
+			Daths
+		</nombre>
+		<apellido>
+			ApellidoAleman
+		</apellido>
+		<dni>
+			23456A
+		</dni>
+	</usuario>
+	<usuario nacionalidad="alemana" edad="50">
+		<nombre>
+			<!-- un nodo puede tener valor -->
+			Jains
+		</nombre>
+		<apellido>
+			ApellidoJains
+		</apellido>
+		<dni>
+			4567S
+		</dni>
+	</usuario>
+    <usuario nacionalidad="alemana" edad="50">
+        <nombre>
+            <!-- un nodo puede tener valor -->
+            Jains
+        </nombre>
+        <apellido>
+            ApellidoJains
+        </apellido>
+        <dni>
+            4567S
+        </dni>
+    </usuario>
+</usuarios>
+<!-- dame todos los usuarios de la / cuya nacionalidad sea española -->

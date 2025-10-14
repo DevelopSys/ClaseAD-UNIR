@@ -1,0 +1,89 @@
+Pelicula p1 = new Pelicula(
+    "Parasite",
+    "Bong Joon-ho",
+    "https://posteritati.com/poster/49421/parasite-original-2019-us-one-sheet-movie-poster", 
+    "Drama / Thriller",
+    2019,
+    8.6
+);
+
+Pelicula p2 = new Pelicula(
+    "Inception",
+    "Christopher Nolan",
+    "https://www.theposterdb.com/set/341784/inception-2010", 
+    "Ciencia ficción / Acción",
+    2010,
+    8.8
+);
+
+Pelicula p3 = new Pelicula(
+    "The Dark Knight",
+    "Christopher Nolan",
+    "https://www.impawards.com/2008/dark_knight.html",
+    "Acción / Crimen / Drama",
+    2008,
+    9.0
+);
+
+Pelicula p4 = new Pelicula(
+    "The Godfather",
+    "Francis Ford Coppola",
+    "https://m.media-amazon.com/images/I/41+eK8zBwQL._AC_.jpg", 
+    "Drama / Crimen",
+    1972,
+    9.2
+);
+
+Pelicula p5 = new Pelicula(
+    "Forrest Gump",
+    "Robert Zemeckis",
+    "https://m.media-amazon.com/images/I/61KcQNu2IIL._AC_SY679_.jpg",
+    "Drama / Romance",
+    1994,
+    8.8
+);
+
+Pelicula p6 = new Pelicula(
+    "Pulp Fiction",
+    "Quentin Tarantino",
+    "https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg",
+    "Crimen / Drama",
+    1994,
+    8.9
+);
+
+Pelicula p7 = new Pelicula(
+    "Gladiator",
+    "Ridley Scott",
+    "https://m.media-amazon.com/images/I/51A9K8C6ZBL._AC_.jpg",
+    "Acción / Aventura / Drama",
+    2000,
+    8.5
+);
+
+Pelicula p8 = new Pelicula(
+    "The Lord of the Rings: The Return of the King",
+    "Peter Jackson",
+    "https://m.media-amazon.com/images/I/51rOnIjLqzL._AC_.jpg",
+    "Fantasía / Aventura",
+    2003,
+    9.0
+);
+
+Pelicula p9 = new Pelicula(
+    "Interstellar",
+    "Christopher Nolan",
+    "https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg",
+    "Ciencia ficción / Drama",
+    2014,
+    8.6
+);
+
+Pelicula p10 = new Pelicula(
+    "Titanic",
+    "James Cameron",
+    "https://m.media-amazon.com/images/I/61LSjrB36+L._AC_SY679_.jpg",
+    "Romance / Drama",
+    1997,
+    7.8
+);

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<usuarios>
+    <usuario dni="123A">
+        <nombre>Borja1</nombre>
+        <apellido>Martin1</apellido>
+    </usuario>
+    <usuario dni="223A">
+        <nombre>Borja2</nombre>
+        <apellido>Martin2</apellido>
+    </usuario>
+    <usuario dni="323A">
+        <nombre>Borja3</nombre>
+        <apellido>Martin3</apellido>
+    </usuario>
+    <usuario dni="423A">
+        <nombre>Borja4</nombre>
+        <apellido>Martin4</apellido>
+    </usuario>
+    <usuario dni="523A">
+        <nombre>Borja5</nombre>
+        <apellido>Martin5</apellido>
+    </usuario>
+</usuarios>

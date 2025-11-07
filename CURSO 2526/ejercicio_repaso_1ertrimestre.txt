@@ -1,0 +1,37 @@
+1. Generar un XML con todas las peticiones de la base de datos - JAXB
+
+<usuarios>
+	<usuario id="1" id_perfil="1">
+		<mail>borja@gmail.com</mail>
+	</usuario>
+</usuarios>
+
+2. Importar los datos del XML de prueba (puedo pedirselo a chatGPT) a la base de datos - JAXB
+
+<usuarios>
+	<usuario id="1" id_perfil="1">
+		<mail>borja@gmail.com</mail>
+	</usuario>
+	<usuario id="1" id_perfil="1">
+		<mail>borja@gmail.com</mail>
+	</usuario>
+	<usuario id="1" id_perfil="1">
+		<mail>borja@gmail.com</mail>
+	</usuario>
+	<usuario id="1" id_perfil="1">
+		<mail>borja@gmail.com</mail>
+	</usuario>
+	<usuario id="1" id_perfil="1">
+		<mail>borja@gmail.com</mail>
+	</usuario>
+</usuarios>
+
+3. El XML generado en el punto 1 lo metais en un tranformador para obtener una HTML con una lista de los usuarios, mostrando nombre y el correo
+<ul>
+	<li>Borja borja@gmail.com</li>
+	<li>Borja borja@gmail.com</li>
+	<li>Borja borja@gmail.com</li>
+	<li>Borja borja@gmail.com</li>
+</ul>
+
+4. Crear una tabla llamada productos. Capturar los datos del JSON del API de dummyjson y guradarlos en la tabla creada -> Jackson

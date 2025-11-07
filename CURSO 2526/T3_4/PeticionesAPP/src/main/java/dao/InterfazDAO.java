@@ -14,7 +14,7 @@ public interface InterfazDAO<T> {
     boolean insertarDato(T data) throws SQLException;
     ArrayList<T> obtenerListaDatos();
     void actualizarDato(T datoNuevo);
-    void borrarDatos(int id);
+    int borrarDatos(int id);
 
 
 }

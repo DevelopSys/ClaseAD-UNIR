@@ -27,12 +27,15 @@ public class UsuarioDAOImp implements InterfazDAO<Usuario>, UsuarioDAO {
                 SchemeDB.COL_NAME, SchemeDB.COL_MAIL, SchemeDB.COL_PHONE, SchemeDB.COL_PROFILE
         );
 
+
         preparedStatement = connection.prepareStatement(query);
         preparedStatement.setString(1, data.getNombre());
         preparedStatement.setString(2, data.getMail());
         preparedStatement.setInt(3, data.getTelefono());
         preparedStatement.setInt(4, data.getIdPerfil());
         return preparedStatement.execute();
+
+
     }
 
     @Override
@@ -46,14 +49,13 @@ public class UsuarioDAOImp implements InterfazDAO<Usuario>, UsuarioDAO {
                 String mail = resultSet.getString(SchemeDB.COL_MAIL);
                 int telefono = resultSet.getInt(SchemeDB.COL_PHONE);
                 int idPerfil = resultSet.getInt(SchemeDB.COL_PROFILE);
-                Usuario usuario = new Usuario(nombre, mail, telefono, idPerfil);
-                listaUsuarios.add(usuario);
+                listaUsuarios.add(new Usuario(nombre, mail, telefono, idPerfil));
             }
             return listaUsuarios;
         } catch (SQLException e) {
             // error en la query
         }
-        return null;
+        return listaUsuarios;
     }
 
     @Override
@@ -62,8 +64,16 @@ public class UsuarioDAOImp implements InterfazDAO<Usuario>, UsuarioDAO {
     }
 
     @Override
-    public void borrarDatos(int id) {
-
+    public int borrarDatos(int id) {
+        String query = String.format("DELETE FROM %s WHERE %s=?",SchemeDB.TAB_NAME,SchemeDB.COL_ID);
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1,id);
+            return preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Error en la ejecucion de la query");
+        }
+        return -1;
     }
 
     @Override

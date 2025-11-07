@@ -18,4 +18,11 @@ public class Usuario {
         this.telefono = telefono;
         this.idPerfil = idPerfil;
     }
+
+    public void mostrarDatos(){
+        System.out.println("nombre = " + nombre);
+        System.out.println("mail = " + mail);
+        System.out.println("telefono = " + telefono);
+        System.out.println("idPerfil = " + idPerfil);
+    }
 }

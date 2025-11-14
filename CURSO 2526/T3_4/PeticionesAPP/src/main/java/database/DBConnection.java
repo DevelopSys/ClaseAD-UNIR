@@ -28,7 +28,7 @@ public class DBConnection {
             properties.load(fileInputStream);
             String user = "root";
             String pass = "root";
-            String url = "jdbc:mysql://127.0.0.1:41063/peticiones";;
+            String url = "jdbc:mysql://localhost:3306/peticiones";;
             connection = DriverManager.getConnection(url,user,pass);
             // https://mvnrepository.com/artifact/com.mysql/mysql-connector-j/9.3.0
         } catch (FileNotFoundException e) {

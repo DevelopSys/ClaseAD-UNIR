@@ -22,6 +22,7 @@ public class UsuarioDAOImp implements InterfazDAO<Usuario>, UsuarioDAO {
 
     @Override
     public boolean insertarDato(Usuario data) throws SQLException {
+        System.out.println("Importando datos "+data.getId());
         String query = String.format("INSERT INTO %s (%s,%s,%s,%s) VALUES (?,?,?,?)",
                 SchemeDB.TAB_NAME,
                 SchemeDB.COL_NAME, SchemeDB.COL_MAIL, SchemeDB.COL_PHONE, SchemeDB.COL_PROFILE
@@ -45,11 +46,12 @@ public class UsuarioDAOImp implements InterfazDAO<Usuario>, UsuarioDAO {
             preparedStatement = connection.prepareStatement(String.format("SELECT * FROM %s", SchemeDB.TAB_NAME));
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
+                int  id = resultSet.getInt(SchemeDB.COL_ID);
                 String nombre = resultSet.getString(SchemeDB.COL_NAME);
                 String mail = resultSet.getString(SchemeDB.COL_MAIL);
                 int telefono = resultSet.getInt(SchemeDB.COL_PHONE);
                 int idPerfil = resultSet.getInt(SchemeDB.COL_PROFILE);
-                listaUsuarios.add(new Usuario(nombre, mail, telefono, idPerfil));
+                listaUsuarios.add(new Usuario(id,nombre, mail, telefono, idPerfil));
             }
             return listaUsuarios;
         } catch (SQLException e) {
@@ -57,6 +59,8 @@ public class UsuarioDAOImp implements InterfazDAO<Usuario>, UsuarioDAO {
         }
         return listaUsuarios;
     }
+
+
 
     @Override
     public void actualizarDato(Usuario datoNuevo) {

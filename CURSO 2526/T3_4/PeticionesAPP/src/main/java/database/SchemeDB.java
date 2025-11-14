@@ -5,6 +5,7 @@ public interface SchemeDB {
     // atributos -> PUBLICOS FINAL STATIL
     String DB_NAME = "peticiones";
     String TAB_NAME = "usuarios";
+    String TAB_PROD = "productos";
     String COL_NAME = "nombre";
     String COL_MAIL = "mail";
     String COL_PHONE = "telefono";

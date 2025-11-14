@@ -1,10 +1,33 @@
 package controller;
 
+import com.fasterxml.jackson.core.JsonEncoding;
+import com.fasterxml.jackson.core.exc.StreamReadException;
+import com.fasterxml.jackson.databind.DatabindException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 import dao.UsuarioDAOImp;
-import model.Usuario;
 
+import model.Usuario;
+import model.UsuarioJSON;
+import model.UsuarioResponse;
+import model.UsuarioXML;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
+import java.awt.desktop.UserSessionListener;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class PeticionesController {
@@ -65,11 +88,115 @@ public class PeticionesController {
         // DAO de uno en uno -> actualizar por nombre
     }
 
-    public void listarUsuarios(){
+    public void listarUsuarios() {
         // System.out.println("Quieres listar todos los datos o solo alguno");
-        for (Usuario item: usuarioDAOImp.obtenerListaDatos()) {
+        for (Usuario item : usuarioDAOImp.obtenerListaDatos()) {
             item.mostrarDatos();
         }
     }
 
+    public void importarJSON() {
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            URL url = new URL("https://dummyjson.com/users");
+            UsuarioResponse response = mapper.readValue(url, UsuarioResponse.class);
+            for (UsuarioJSON item : response.getUsers()) {
+                /*
+                int telefono = Integer.parseInt(item.getPhone().replaceAll(" ", "")
+                        .replaceAll("-", "")
+                        .replaceAll("\\+", ""));
+                 */
+                Usuario usuario = new Usuario(item.getFirstName(), item.getEmail(), item.getAge(), 2);
+                usuarioDAOImp.insertarDato(usuario);
+            }
+
+        } catch (MalformedURLException e) {
+            System.out.println("URL mal creada, servidor erroneo");
+        } catch (StreamReadException | SQLException | DatabindException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void exportarJSON() {
+        // ObjectMapper mapper = new ObjectMapper();
+        // ObjectWriter response = mapper.writerFor(UsuarioResponse.class);
+        ArrayList<Usuario> lista = usuarioDAOImp.obtenerListaDatos();
+        JSONArray arrayJson = new JSONArray();
+        JSONObject jsonObject = null;
+        for (Usuario item : lista) {
+            jsonObject = new JSONObject();
+            jsonObject.put("nombre", item.getNombre());
+            jsonObject.put("correo", item.getMail());
+            jsonObject.put("telefono", item.getTelefono());
+            arrayJson.put(jsonObject);
+        }
+        File file = new File("src/main/java/controller/usuarios.json");
+        PrintWriter pw = null;
+        try {
+            pw = new PrintWriter(new FileWriter(file));
+            pw.println(arrayJson);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
+            pw.close();
+        }
+        // System.out.println(arrayJson.toString());
+
+
+        //Usuario usuario = lista.getFirst();
+        //File file = new File("src/main/java/controller/usuarios.json");
+        //PrintWriter pw = null;
+        /*try {
+            pw = new PrintWriter(new FileWriter(file));
+            pw.println(usuario);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
+            pw.close();
+        }*/
+        /*
+        try {
+            response.createGenerator(new File("src/main/java/controller/usuario.json"),
+                    JsonEncoding.UTF8);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }*/
+    }
+
+    public void exportacionXML() {
+        JAXBContext context = null;
+        Marshaller marshaller;
+        List<Usuario> lista = usuarioDAOImp.obtenerListaDatos();
+        UsuarioXML usuarioXML = new UsuarioXML();
+        usuarioXML.setLista(lista);
+        try {
+            context = JAXBContext.newInstance(UsuarioXML.class);
+            marshaller = context.createMarshaller();
+            marshaller.marshal(usuarioXML, new File("src/main/java/controller/usuarios.xml"));
+        } catch (JAXBException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public void importarXML() {
+        JAXBContext context;
+        Unmarshaller unmarshaller;
+
+        try {
+            context = JAXBContext.newInstance(UsuarioXML.class);
+            unmarshaller = context.createUnmarshaller();
+            UsuarioXML usuarioXML = (UsuarioXML) unmarshaller.unmarshal(new File("src/main/java/controller/usuarios.xml"));
+            for (Usuario item : usuarioXML.getLista()) {
+                usuarioDAOImp.insertarDato(item);
+            }
+        } catch (JAXBException e) {
+            throw new RuntimeException(e);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 }

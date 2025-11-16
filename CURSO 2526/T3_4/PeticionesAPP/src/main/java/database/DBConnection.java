@@ -23,12 +23,20 @@ public class DBConnection {
     private static void createConnection(){
 
         Properties properties = new Properties();
+        FileInputStream fileInputStream = null;
+
         try {
-            FileInputStream fileInputStream = new FileInputStream("/Users/borja/Documents/GitHub/ClaseAD-UNIR/CURSO 2526/T3_4/PeticionesAPP/src/main/resources/database.properties");
+
+            /*fileInputStream = new FileInputStream("src/main/resources/database.properties");
             properties.load(fileInputStream);
             String user = "root";
             String pass = "root";
-            String url = "jdbc:mysql://localhost:3306/peticiones";;
+             */
+            fileInputStream = new FileInputStream("src/main/resources/database.properties");
+            properties.load(fileInputStream);
+            String url = properties.getProperty("url");
+            String user = properties.getProperty("user");
+            String pass = properties.getProperty("pass");
             connection = DriverManager.getConnection(url,user,pass);
             // https://mvnrepository.com/artifact/com.mysql/mysql-connector-j/9.3.0
         } catch (FileNotFoundException e) {

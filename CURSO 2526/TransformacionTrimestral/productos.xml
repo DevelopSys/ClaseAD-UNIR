@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<productos>
+    <producto id="1">
+        <precio>10.0</precio>
+        <nombre>Producto1</nombre>
+        <categoria>Categoria1</categoria>
+    </producto>
+    <producto id="2">
+        <precio>20.0</precio>
+        <nombre>Producto2</nombre>
+        <categoria>Categoria2</categoria>
+    </producto>
+    <producto id="3">
+        <precio>30.0</precio>
+        <nombre>Producto3</nombre>
+        <categoria>Categoria3</categoria>
+    </producto>
+    <producto id="4">
+        <precio>40.0</precio>
+        <nombre>Producto4</nombre>
+        <categoria>Categoria4</categoria>
+    </producto>
+    <producto id="5">
+        <precio>50.0</precio>
+        <nombre>Producto5</nombre>
+        <categoria>Categoria5</categoria>
+    </producto>
+</productos>

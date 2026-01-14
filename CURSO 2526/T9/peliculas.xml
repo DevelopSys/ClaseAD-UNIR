@@ -1,0 +1,345 @@
+<peliculas catalogo="Demo XQuery Numeros" moneda="USD" version="1.2">
+	<pelicula id="p1" titulo="Inception" anio="2010" duracionMinutos="148" presupuestoMillones="160" recaudacionMillones="829.9" notaMedia="8.8" edadRecomendada="13" oscars="4">
+		<director>
+			Christopher Nolan
+		</director>
+		<genero principal="ciencia ficcion">
+			Accion
+		</genero>
+		<puntuaciones>
+			<puntuacion fuente="criticos">
+				9.0
+			</puntuacion>
+			<puntuacion fuente="usuarios">
+				8.7
+			</puntuacion>
+			<puntuacion fuente="imdb">
+				8.8
+			</puntuacion>
+		</puntuaciones>
+		<reparto>
+			<actor papel="Dom Cobb" salarioMillones="20">
+				Leonardo DiCaprio
+			</actor>
+			<actor papel="Arthur" salarioMillones="5">
+				Joseph Gordon-Levitt
+			</actor>
+			<actor papel="Ariadne" salarioMillones="4">
+				Elliot Page
+			</actor>
+		</reparto>
+	</pelicula>
+	<pelicula id="p2" titulo="The Matrix" anio="1999" duracionMinutos="136" presupuestoMillones="63" recaudacionMillones="466.3" notaMedia="8.7" edadRecomendada="16" oscars="4">
+		<director>
+			Lana Wachowski
+		</director>
+		<director>
+			Lilly Wachowski
+		</director>
+		<genero principal="ciencia ficcion">
+			Accion
+		</genero>
+		<puntuaciones>
+			<puntuacion fuente="criticos">
+				8.9
+			</puntuacion>
+			<puntuacion fuente="usuarios">
+				8.6
+			</puntuacion>
+			<puntuacion fuente="imdb">
+				8.7
+			</puntuacion>
+		</puntuaciones>
+		<reparto>
+			<actor papel="Neo" salarioMillones="10">
+				Keanu Reeves
+			</actor>
+			<actor papel="Morpheus" salarioMillones="3">
+				Laurence Fishburne
+			</actor>
+			<actor papel="Trinity" salarioMillones="3">
+				Carrie-Anne Moss
+			</actor>
+		</reparto>
+	</pelicula>
+	<pelicula id="p3" titulo="Interstellar" anio="2014" duracionMinutos="169" presupuestoMillones="165" recaudacionMillones="701.7" notaMedia="8.6" edadRecomendada="13" oscars="1">
+		<director>
+			Christopher Nolan
+		</director>
+		<genero principal="ciencia ficcion">
+			Drama
+		</genero>
+		<puntuaciones>
+			<puntuacion fuente="criticos">
+				8.3
+			</puntuacion>
+			<puntuacion fuente="usuarios">
+				8.7
+			</puntuacion>
+			<puntuacion fuente="imdb">
+				8.6
+			</puntuacion>
+		</puntuaciones>
+		<reparto>
+			<actor papel="Cooper" salarioMillones="15">
+				Matthew McConaughey
+			</actor>
+			<actor papel="Brand" salarioMillones="8">
+				Anne Hathaway
+			</actor>
+			<actor papel="Murph" salarioMillones="2">
+				Jessica Chastain
+			</actor>
+			<actor papel="TARS" salarioMillones="1">
+				Bill Irwin
+			</actor>
+		</reparto>
+	</pelicula>
+	<pelicula id="p4" titulo="Toy Story" anio="1995" duracionMinutos="81" presupuestoMillones="30" recaudacionMillones="373.6" notaMedia="8.3" edadRecomendada="0" oscars="0">
+		<director>
+			John Lasseter
+		</director>
+		<genero principal="animacion">
+			Familiar
+		</genero>
+		<puntuaciones>
+			<puntuacion fuente="criticos">
+				8.8
+			</puntuacion>
+			<puntuacion fuente="usuarios">
+				8.2
+			</puntuacion>
+			<puntuacion fuente="imdb">
+				8.3
+			</puntuacion>
+		</puntuaciones>
+		<reparto>
+			<actor papel="Woody" salarioMillones="5">
+				Tom Hanks
+			</actor>
+			<actor papel="Buzz Lightyear" salarioMillones="4">
+				Tim Allen
+			</actor>
+			<actor papel="Sr. Patata" salarioMillones="1">
+				Don Rickles
+			</actor>
+		</reparto>
+	</pelicula>
+	<pelicula id="p5" titulo="The Godfather" anio="1972" duracionMinutos="175" presupuestoMillones="7" recaudacionMillones="250" notaMedia="9.2" edadRecomendada="18" oscars="3">
+		<director>
+			Francis Ford Coppola
+		</director>
+		<genero principal="drama">
+			Crimen
+		</genero>
+		<puntuaciones>
+			<puntuacion fuente="criticos">
+				9.4
+			</puntuacion>
+			<puntuacion fuente="usuarios">
+				9.1
+			</puntuacion>
+			<puntuacion fuente="imdb">
+				9.2
+			</puntuacion>
+		</puntuaciones>
+		<reparto>
+			<actor papel="Vito Corleone" salarioMillones="1.6">
+				Marlon Brando
+			</actor>
+			<actor papel="Michael Corleone" salarioMillones="0.035">
+				Al Pacino
+			</actor>
+			<actor papel="Sonny Corleone" salarioMillones="0.09">
+				James Caan
+			</actor>
+		</reparto>
+	</pelicula>
+	<!-- Mismo año 2010 para medias por año -->
+	<pelicula id="p6" titulo="The Social Network" anio="2010" duracionMinutos="120" presupuestoMillones="40" recaudacionMillones="224.9" notaMedia="7.7" edadRecomendada="13" oscars="3">
+		<director>
+			David Fincher
+		</director>
+		<genero principal="drama">
+			Biografico
+		</genero>
+		<puntuaciones>
+			<puntuacion fuente="criticos">
+				8.5
+			</puntuacion>
+			<puntuacion fuente="usuarios">
+				7.6
+			</puntuacion>
+			<puntuacion fuente="imdb">
+				7.8
+			</puntuacion>
+		</puntuaciones>
+		<reparto>
+			<actor papel="Mark Zuckerberg" salarioMillones="1">
+				Jesse Eisenberg
+			</actor>
+			<actor papel="Eduardo Saverin" salarioMillones="0.8">
+				Andrew Garfield
+			</actor>
+			<actor papel="Sean Parker" salarioMillones="0.7">
+				Justin Timberlake
+			</actor>
+		</reparto>
+	</pelicula>
+	<!-- Año repetido 1999 -->
+	<pelicula id="p7" titulo="Fight Club" anio="1999" duracionMinutos="139" presupuestoMillones="63" recaudacionMillones="101.2" notaMedia="8.8" edadRecomendada="18" oscars="0">
+		<director>
+			David Fincher
+		</director>
+		<genero principal="drama">
+			Thriller
+		</genero>
+		<puntuaciones>
+			<puntuacion fuente="criticos">
+				7.8
+			</puntuacion>
+			<puntuacion fuente="usuarios">
+				8.9
+			</puntuacion>
+			<puntuacion fuente="imdb">
+				8.8
+			</puntuacion>
+		</puntuaciones>
+		<reparto>
+			<actor papel="Narrador" salarioMillones="6">
+				Edward Norton
+			</actor>
+			<actor papel="Tyler Durden" salarioMillones="17.5">
+				Brad Pitt
+			</actor>
+			<actor papel="Marla Singer" salarioMillones="2">
+				Helena Bonham Carter
+			</actor>
+			<actor papel="Robert Paulson" salarioMillones="1">
+				Meat Loaf
+			</actor>
+		</reparto>
+	</pelicula>
+	<!-- Año repetido 2014 -->
+	<pelicula id="p8" titulo="Whiplash" anio="2014" duracionMinutos="107" presupuestoMillones="3.3" recaudacionMillones="49" notaMedia="8.5" edadRecomendada="16" oscars="3">
+		<director>
+			Damien Chazelle
+		</director>
+		<genero principal="drama">
+			Musical
+		</genero>
+		<puntuaciones>
+			<puntuacion fuente="criticos">
+				8.9
+			</puntuacion>
+			<puntuacion fuente="usuarios">
+				8.5
+			</puntuacion>
+			<puntuacion fuente="imdb">
+				8.5
+			</puntuacion>
+		</puntuaciones>
+		<reparto>
+			<actor papel="Andrew Neiman" salarioMillones="0.4">
+				Miles Teller
+			</actor>
+			<actor papel="Terence Fletcher" salarioMillones="0.6">
+				J.K. Simmons
+			</actor>
+			<actor papel="Nicole" salarioMillones="0.1">
+				Melissa Benoist
+			</actor>
+		</reparto>
+	</pelicula>
+	<!-- Nuevas pelis con actores repetidos -->
+	<pelicula id="p9" titulo="Catch Me If You Can" anio="2002" duracionMinutos="141" presupuestoMillones="52" recaudacionMillones="352.1" notaMedia="8.1" edadRecomendada="13" oscars="0">
+		<director>
+			Steven Spielberg
+		</director>
+		<genero principal="drama">
+			Biografico
+		</genero>
+		<puntuaciones>
+			<puntuacion fuente="criticos">
+				8.0
+			</puntuacion>
+			<puntuacion fuente="usuarios">
+				8.2
+			</puntuacion>
+			<puntuacion fuente="imdb">
+				8.1
+			</puntuacion>
+		</puntuaciones>
+		<reparto>
+			<actor papel="Frank Abagnale Jr." salarioMillones="20">
+				Leonardo DiCaprio
+			</actor>
+			<actor papel="Carl Hanratty" salarioMillones="15">
+				Tom Hanks
+			</actor>
+			<actor papel="Frank Abagnale Sr." salarioMillones="3">
+				Christopher Walken
+			</actor>
+		</reparto>
+	</pelicula>
+	<pelicula id="p10" titulo="Saving Private Ryan" anio="1998" duracionMinutos="169" presupuestoMillones="70" recaudacionMillones="482.3" notaMedia="8.6" edadRecomendada="16" oscars="5">
+		<director>
+			Steven Spielberg
+		</director>
+		<genero principal="drama">
+			Belica
+		</genero>
+		<puntuaciones>
+			<puntuacion fuente="criticos">
+				8.7
+			</puntuacion>
+			<puntuacion fuente="usuarios">
+				8.6
+			</puntuacion>
+			<puntuacion fuente="imdb">
+				8.6
+			</puntuacion>
+		</puntuaciones>
+		<reparto>
+			<actor papel="Capitan Miller" salarioMillones="20">
+				Tom Hanks
+			</actor>
+			<actor papel="Soldado Reiben" salarioMillones="1.5">
+				Edward Burns
+			</actor>
+			<actor papel="Soldado Upham" salarioMillones="1">
+				Jeremy Davies
+			</actor>
+		</reparto>
+	</pelicula>
+	<pelicula id="p11" titulo="Once Upon a Time in Hollywood" anio="2019" duracionMinutos="161" presupuestoMillones="90" recaudacionMillones="377.6" notaMedia="7.6" edadRecomendada="18" oscars="2">
+		<director>
+			Quentin Tarantino
+		</director>
+		<genero principal="drama">
+			Comedia
+		</genero>
+		<puntuaciones>
+			<puntuacion fuente="criticos">
+				7.9
+			</puntuacion>
+			<puntuacion fuente="usuarios">
+				7.6
+			</puntuacion>
+			<puntuacion fuente="imdb">
+				7.6
+			</puntuacion>
+		</puntuaciones>
+		<reparto>
+			<actor papel="Rick Dalton" salarioMillones="15">
+				Leonardo DiCaprio
+			</actor>
+			<actor papel="Cliff Booth" salarioMillones="15">
+				Brad Pitt
+			</actor>
+			<actor papel="Sharon Tate" salarioMillones="1">
+				Margot Robbie
+			</actor>
+		</reparto>
+	</pelicula>
+</peliculas>

@@ -1,0 +1,225 @@
+<strangerThings titulo="Stranger Things" genero="ciencia ficcion, terror" plataforma="Netflix" ambientacionPrincipal="Hawkins, Indiana" decada="1980" creadores="Hermanos Duffer">
+	<general anioEstreno="2016" temporadasEmitidas="5">
+		<sinopsisGeneral>
+			La desaparición de Will Byers destapa experimentos secretos, una dimensión oscura y criaturas que amenazan Hawkins.
+		</sinopsisGeneral>
+	</general>
+	<temporadas>
+		<temporada numero="1" anio="2016" portalAbierto="true">
+			<eventoClave>
+				Desaparición de Will y primer contacto con el Mundo del Revés.
+			</eventoClave>
+			<villanoPrincipal>
+				Demogorgon
+			</villanoPrincipal>
+		</temporada>
+		<temporada numero="2" anio="2017" portalAbierto="true">
+			<eventoClave>
+				Influencia del Mind Flayer sobre Will y cierre del gran portal en el laboratorio.
+			</eventoClave>
+			<villanoPrincipal>
+				Mind Flayer
+			</villanoPrincipal>
+		</temporada>
+		<temporada numero="3" anio="2019" portalAbierto="true">
+			<eventoClave>
+				Experimentos soviéticos bajo el centro comercial Starcourt.
+			</eventoClave>
+			<villanoPrincipal>
+				Mind Flayer (forma física)
+			</villanoPrincipal>
+		</temporada>
+		<temporada numero="4" anio="2022" portalAbierto="muyAbierto">
+			<eventoClave>
+				Aparición de Vecna y apertura de múltiples grietas en Hawkins.
+			</eventoClave>
+			<villanoPrincipal>
+				Vecna
+			</villanoPrincipal>
+		</temporada>
+	</temporadas>
+	<localizaciones>
+		<localizacion id="loc1" nombre="Hawkins" estado="Indiana" pais="Estados Unidos" tipo="pueblo" poblacionAproximada="30000">
+			<descripcion>
+				Pueblo ficticio del Medio Oeste donde se desarrolla la mayor parte de la historia.
+			</descripcion>
+		</localizacion>
+		<localizacion id="loc2" nombre="Laboratorio Nacional de Hawkins" tipo="instalacion gubernamental" departamentoOficial="Energia" realizaExperimentosParanormales="true">
+			<descripcion>
+				Laboratorio secreto que realiza experimentos de control mental y apertura de portales.
+			</descripcion>
+		</localizacion>
+		<localizacion id="loc3" nombre="Mundo del Revés" tipo="dimension alterna" habitable="false" nivelPeligro="extremo">
+			<descripcion>
+				Dimensión oscura conectada a Hawkins donde habitan criaturas hostiles.
+			</descripcion>
+		</localizacion>
+		<localizacion id="loc4" nombre="Starcourt Mall" tipo="centro comercial" ciudad="Hawkins">
+			<descripcion>
+				Centro comercial bajo el cual se construye una base secreta soviética.
+			</descripcion>
+		</localizacion>
+	</localizaciones>
+	<organizaciones>
+		<organizacion id="org1" nombre="Gobierno de Estados Unidos" tipo="gubernamental">
+			<descripcion>
+				Controla oficialmente el Laboratorio Nacional de Hawkins.
+			</descripcion>
+		</organizacion>
+		<organizacion id="org2" nombre="Partido de los chicos" tipo="grupo de amigos">
+			<miembros>
+				Mike, Will, Lucas, Dustin, más tarde Max y Eleven.
+			</miembros>
+		</organizacion>
+	</organizaciones>
+	<personajes>
+		<personaje id="p1" nombre="Eleven" nombreReal="Jane Hopper" genero="femenino" edadInicio="12" tienePoderes="true" rol="principal">
+			<actor>
+				Millie Bobby Brown
+			</actor>
+			<origenExperimentos laboratorio="Laboratorio Nacional de Hawkins" />
+			<poderes nivel="alto">
+				<tipo>
+					Telequinesis
+				</tipo>
+				<tipo>
+					Telepatia
+				</tipo>
+				<tipo>
+					Apertura y cierre de portales
+				</tipo>
+			</poderes>
+			<relacion tipo="pareja" personaje="Mike Wheeler" />
+			<relacion tipo="figuraPaterna" personaje="Jim Hopper" />
+			<relacion tipo="amiga" personaje="Will Byers" />
+			<temporadas apariciones="1,2,3,4">
+				Protagonista central de la lucha contra el Mundo del Revés.
+			</temporadas>
+		</personaje>
+		<personaje id="p2" nombre="Mike Wheeler" genero="masculino" edadInicio="12" tienePoderes="false" rol="principal">
+			<actor>
+				Finn Wolfhard
+			</actor>
+			<grupo>
+				Party
+			</grupo>
+			<relacion tipo="amigo" personaje="Will Byers" />
+			<relacion tipo="amigo" personaje="Dustin Henderson" />
+			<relacion tipo="amigo" personaje="Lucas Sinclair" />
+			<relacion tipo="pareja" personaje="Eleven" />
+			<temporadas apariciones="1,2,3,4">
+				Lidera al grupo de amigos en la primera temporada.
+			</temporadas>
+		</personaje>
+		<personaje id="p3" nombre="Will Byers" genero="masculino" edadInicio="12" tienePoderes="false" rol="principal">
+			<actor>
+				Noah Schnapp
+			</actor>
+			<estadoInicial>
+				Desaparecido en el Mundo del Revés
+			</estadoInicial>
+			<relacion tipo="hermano" personaje="Jonathan Byers" />
+			<relacion tipo="madre" personaje="Joyce Byers" />
+			<relacion tipo="amigo" personaje="Mike Wheeler" />
+			<relacion tipo="amigo" personaje="Dustin Henderson" />
+			<relacion tipo="amigo" personaje="Lucas Sinclair" />
+			<conexionDimension tipo="poseido">
+				Mind Flayer
+			</conexionDimension>
+			<temporadas apariciones="1,2,3,4">
+				Su desaparición desencadena la historia de la serie.
+			</temporadas>
+		</personaje>
+		<personaje id="p4" nombre="Jim Hopper" genero="masculino" profesion="jefe de policia" rol="principal">
+			<actor>
+				David Harbour
+			</actor>
+			<relacion tipo="figuraPaterna" personaje="Eleven" />
+			<relacion tipo="aliado" personaje="Joyce Byers" />
+			<relacion tipo="protege" personaje="Hawkins" />
+			<rasgo>
+				Protector, impulsivo y dispuesto al sacrificio.
+			</rasgo>
+		</personaje>
+		<personaje id="p5" nombre="Joyce Byers" genero="femenino" profesion="madre soltera" rol="principal">
+			<actor>
+				Winona Ryder
+			</actor>
+			<relacion tipo="madre" personaje="Will Byers" />
+			<relacion tipo="madre" personaje="Jonathan Byers" />
+			<relacion tipo="aliada" personaje="Jim Hopper" />
+			<rasgo>
+				Persistente y dispuesta a todo por sus hijos.
+			</rasgo>
+		</personaje>
+		<personaje id="p6" nombre="Dustin Henderson" genero="masculino" rol="principal" tienePoderes="false">
+			<actor>
+				Gaten Matarazzo
+			</actor>
+			<grupo>
+				Party
+			</grupo>
+			<rasgo>
+				Ingenioso, carismático y apasionado por la tecnologia y los juegos de rol.
+			</rasgo>
+			<relacion tipo="amigo" personaje="Mike Wheeler" />
+			<relacion tipo="amigo" personaje="Will Byers" />
+			<relacion tipo="amigo" personaje="Lucas Sinclair" />
+			<relacion tipo="amigo" personaje="Steve Harrington" />
+		</personaje>
+		<personaje id="p7" nombre="Lucas Sinclair" genero="masculino" rol="principal" tienePoderes="false">
+			<actor>
+				Caleb McLaughlin
+			</actor>
+			<grupo>
+				Party
+			</grupo>
+			<relacion tipo="amigo" personaje="Mike Wheeler" />
+			<relacion tipo="amigo" personaje="Dustin Henderson" />
+			<relacion tipo="pareja" personaje="Max Mayfield" />
+		</personaje>
+		<personaje id="p8" nombre="Max Mayfield" genero="femenino" rol="principal" tienePoderes="false">
+			<actor>
+				Sadie Sink
+			</actor>
+			<relacion tipo="pareja" personaje="Lucas Sinclair" />
+			<relacion tipo="amiga" personaje="Eleven" />
+		</personaje>
+		<personaje id="p9" nombre="Steve Harrington" genero="masculino" rol="principal" tienePoderes="false">
+			<actor>
+				Joe Keery
+			</actor>
+			<rasgo>
+				Empieza como chico popular y termina como protector de los niños.
+			</rasgo>
+			<relacion tipo="amigo" personaje="Dustin Henderson" />
+			<relacion tipo="exPareja" personaje="Nancy Wheeler" />
+		</personaje>
+	</personajes>
+	<criaturas>
+		<criatura id="c1" nombre="Demogorgon" tipo="monstruo" origen="Mundo del Revés" inteligencia="media" agresividad="alta">
+			<descripcion>
+				Criatura depredadora que secuestra a varias personas en Hawkins.
+			</descripcion>
+			<primeraAparicion temporada="1">
+				Ataca especialmente al grupo durante los eventos iniciales.
+			</primeraAparicion>
+		</criatura>
+		<criatura id="c2" nombre="Mind Flayer" tipo="entidad" origen="Mundo del Revés" inteligencia="muy alta" agresividad="extrema">
+			<descripcion>
+				Entidad que controla criaturas y personas, intentando invadir la realidad.
+			</descripcion>
+			<primeraAparicion temporada="2">
+				Mantiene una conexión mental con Will Byers.
+			</primeraAparicion>
+		</criatura>
+		<criatura id="c3" nombre="Vecna" tipo="hechicero" origen="humano corrompido" inteligencia="muy alta">
+			<descripcion>
+				Ser que utiliza traumas personales para atacar a las víctimas.
+			</descripcion>
+			<primeraAparicion temporada="4">
+				Su plan abre grietas masivas en Hawkins.
+			</primeraAparicion>
+		</criatura>
+	</criaturas>
+</strangerThings>

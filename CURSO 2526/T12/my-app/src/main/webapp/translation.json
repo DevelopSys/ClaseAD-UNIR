@@ -1,0 +1,133 @@
+{
+  "app": {
+    "title": "My App"
+  },
+  "navigation": {
+    "toggle": "Toggle navigation",
+    "home": "Home",
+    "entities": "Entities"
+  },
+  "home": {
+    "index": {
+      "headline": "Welcome to your new app!",
+      "text": "Your app was created with <a href=\"https://bootify.io\" target=\"_blank\">Bootify.io</a> and can now be customized. If you are happy with the result, <strong>please recommend us to other developers</strong> - so Bootify.io can grow further.",
+      "swagger": {
+        "text": "Swagger is",
+        "link": "available here"
+      },
+      "exploreEntities": "Explore your entities"
+    }
+  },
+  "error": {
+    "page": {
+      "headline": "Error",
+      "message": "The page you are looking for is not available right now."
+    }
+  },
+  "usuario": {
+    "list": {
+      "headline": "Usuarios",
+      "createNew": "Create new Usuario",
+      "empty": "No Usuarios could be found.",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "add": {
+      "headline": "Add Usuario",
+      "back": "Back to list"
+    },
+    "id": {
+      "label": "Id"
+    },
+    "nombre": {
+      "label": "Nombre"
+    },
+    "pass": {
+      "label": "Pass"
+    },
+    "correo": {
+      "label": "Correo"
+    },
+    "productoid": {
+      "label": "Productoid"
+    },
+    "edit": {
+      "headline": "Edit Usuario",
+      "back": "Back to list"
+    },
+    "create": {
+      "success": "Usuario was created successfully."
+    },
+    "update": {
+      "success": "Usuario was updated successfully."
+    },
+    "delete": {
+      "success": "Usuario was removed successfully."
+    }
+  },
+  "producto": {
+    "list": {
+      "headline": "Productoes",
+      "createNew": "Create new Producto",
+      "empty": "No Productoes could be found.",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "add": {
+      "headline": "Add Producto",
+      "back": "Back to list"
+    },
+    "id": {
+      "label": "Id"
+    },
+    "nombre": {
+      "label": "Nombre"
+    },
+    "precio": {
+      "label": "Precio"
+    },
+    "edit": {
+      "headline": "Edit Producto",
+      "back": "Back to list"
+    },
+    "usuario": {
+      "productoid": {
+        "referenced": "This entity is still referenced by Usuario {{id}} via field Productoid."
+      }
+    },
+    "create": {
+      "success": "Producto was created successfully."
+    },
+    "update": {
+      "success": "Producto was updated successfully."
+    },
+    "delete": {
+      "success": "Producto was removed successfully."
+    }
+  },
+  "exists": {
+    "usuario": {
+      "correo": "This Correo is already taken."
+    }
+  },
+  "Exists": {
+    "usuario": {
+      "productoid": "This Producto is already referenced by another Usuario."
+    }
+  },
+  "select": {
+    "empty": {
+      "label": "Please select"
+    }
+  },
+  "delete": {
+    "confirm": "Do you really want to delete this element? This cannot be undone."
+  },
+  "operation": {
+    "success": "Your operation was successful."
+  },
+  "maxlength": "Your value must have a length of less then ${max} characters.",
+  "valid": {
+    "double": "Please provide a valid floating point number."
+  }
+}

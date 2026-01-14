@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "ES2022",
+      "dom"
+    ],
+    "outDir": "./target/classes/static/out-tsc",
+    "removeComments": true,
+    "baseUrl": "src/main/webapp",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "moduleResolution": "bundler",
+    "target": "ES2022",
+    "module": "ES2022",
+    "resolveJsonModule": true,
+    "paths": {},
+    "sourceMap": true,
+    "alwaysStrict": true,
+    "allowUnreachableCode": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": false,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "typeRoots": ["src/main/webapp/types", "node_modules/@types"]
+  },
+  "exclude": [
+    "node_modules/**/*",
+    "**/build/**/*",
+    "**/out/**/*"
+  ]
+}

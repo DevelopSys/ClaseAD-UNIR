@@ -28,7 +28,7 @@ public class Usuario {
     private String pass;
     // realaciones -> OnetoOne OnetoMany ManyyoMany
     @JsonIgnore
-
+    @JsonBackReference("usuario-producto")
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name="carrito",
             joinColumns={@JoinColumn(name="id_usuario")},

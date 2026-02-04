@@ -119,6 +119,8 @@ public class UsuarioController {
     }
 
     // http://localhost:8080/api/usuario/comprar/1?idProducto=1
+    // RequestParam -> filtros http://miapi.com/api/endpoint?id=1&arg2=valor
+    // PathVariable -> filtros http://miapi.com/api/endpoint/1/32 ->
     @PutMapping("comprar/{id}")
     public ResponseEntity<?> comprarProducto(@PathVariable int id, @RequestParam int idProducto){
         Map<String, Object> response = new HashMap<>();

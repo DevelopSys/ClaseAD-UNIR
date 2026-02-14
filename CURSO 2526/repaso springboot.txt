@@ -1,0 +1,22 @@
+CLIENTES	   ->		SERVER       ->  BD
+
+endpoint -> https://dominio/ruta/endpoint-param
+
+model -> clases que queremos llevar contra base de datos (notaciones hibernate)
+		 gestionar las relaciones
+		 	@jsonback ("usuario-producto")
+		 	@jsonrefence ("usuario-producto")
+repository -> interfaces JPARepository -> todos los metodos base CRUD / crear nuestros metodos con @Query
+servicio -> parte logica del acceso al repositorio @Service. @Autowired repository (no solo del modelo asociado, cualquier repositorio)
+controller ->   @RestController http://midominio:8080/ruta/
+				@Autowired servicio (no solo del modelo asociado, cualquier servicio)
+				enpoint @PUT ("modificar")
+						@GET ("obtener")
+						@POST ("agregar")
+						@DETELE("borrar/{path}") -> @Body
+						http://midominio:8080/ruta/borrar?param1=123
+						public ResponseEntity borrar(@Body body, @PathVariable path, @RequestParam(defaulValue="2345") param1){
+							servicio.logica(param1)
+							Map = HashMap -> par clave - valor
+							return new ReponseEntity.status(CODIGO).body(map)
+						} 

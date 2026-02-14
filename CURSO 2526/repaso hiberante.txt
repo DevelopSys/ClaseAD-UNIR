@@ -1,0 +1,74 @@
+Hibernate -> JPA 
+	objeto -> traduccion @Entity @Colum @ManytoMany ->  SQL
+	objeto -> traduccion @Entity @Colum @ManytoMany ->  HQL -> SQL
+	
+	@Data -> cuidado problemas (referencias ciclicas en relaciones)
+	@ToString (exclude = "relaciones")
+	@EqualHashCode (exclude = "relaciones")
+	Si solo utilizo @Getter y @Setter soluciono las referencias ciclicas
+	@Entity / @Table(name="")/ @Embeddable -> clase
+	@Column(name="") / @Embebbed / @Id / @Trascient (no se guarda en base de datos)
+	Relaciones
+
+		Unidireccional
+		C1
+		@OnetoOne (fetch, lazy)
+		@JoinColumn("id_fk") 
+		private Objecto nombre
+
+		Bidireccionalidad
+		C2
+		@OnetoOne (mappedBy = "nombre")
+		private Objecto
+
+		Unidireccion
+		@Data en la clase
+		@ManytoOne (fetch, lazy)
+		@JoinColumn("id_fk") 
+		private Objecto nombre
+
+		Bidireccionalidad
+		C2
+		@OnetoMany (mappedBy = "nombre")
+		Set<C1> lista
+
+
+		Unidireccion
+		Usuario
+		@ManytoMany(fetch, lazy)
+		@JoinTable("nombre_table",joinColum=@JoinColumn="id_fk1",inverseColum = @JoinColumn("id_fk2"))
+		private Set<Producto> productos
+
+		public void addProducto(Producto p){
+			this.productos.add(p)
+			p.addUsuario(this)
+		}
+
+		Bidireccion
+		Producto
+		@ManytoMany(mappedBy = "productos")
+		private Set<Usuario>
+
+		public void addUsuario(Usuario u){
+			this.usuarios.add(u)
+		}
+
+	new Persona("asd","asd",123,123)
+	hibernate.cfg.xml -> base de datos, clases, sql, ddl, dialog
+	sessionfactory -> session -> ejecutar "Query" -> transaccion ok -> cerramos
+		
+		model -> clases que son mapeadas
+		dto -> ejecuciones sobre la logica -> una por cada modelo
+			persist/save -> guardo
+			merge / delete -> update / borrado
+			list/get -> select
+		controller -> jugar dto
+
+	HQL - CriteriaQuery
+		No trabajo con sentencias QUERY -> FROM Usuario u WHERE u.nombrePropiedad = XXX
+
+	NamedQuery
+		@NamedQuery (name ="usuario.selectAll",query="FROM Usuario u WHERE u.nombrePropiedad = XXX")
+
+	Parametros :nominales ?posicionales
+	createQuery(FROM Usuario u WHERE u.nombrePropiedad = :nombre).setParameter("nombre","datos")

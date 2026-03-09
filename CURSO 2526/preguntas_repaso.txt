@@ -1,0 +1,48 @@
+PREGUNTAS TEMA DDL DDM.
+
+1 Explica con tus palabras una situación en la que usarías un Statement y otra en la que usarías un PreparedStatement. No escribas código, solo describe el caso de uso.
+
+2 Te dan esta consulta:
+SELECT * FROM alumnos WHERE edad > ?
+Indica dos ventajas concretas de usarla con PreparedStatement en lugar de construir el SQL con concatenaciones de cadenas.
+
+3 Imagina que en una aplicación se repite muchas veces la misma consulta con distintos parámetros. ¿Qué impacto tiene eso en rendimiento si usas Statement frente a PreparedStatement? Razona brevemente.
+
+4 Relaciona cada frase con el tipo correcto (marca S o PS y explica por qué en una línea):
+
+“Permite que el motor de la BD reutilice el plan de ejecución.”
+
+“Construye la consulta completa como un String en tiempo de ejecución.”
+
+“Ayuda a evitar inyección SQL si se usa correctamente.”
+
+5 Supón que tienes una interfaz Java con constantes String para cada nombre de columna de una tabla (por ejemplo, String COL_NOMBRE = "nombre"). Explica qué problema práctico resuelve este enfoque cuando trabajas con JDBC.
+
+6 Te piden modificar una tabla y cambiar el nombre de varias columnas. ¿En qué ayuda tener centralizados los nombres de columna en una interfaz o clase de constantes en lugar de “quemarlos” en el código? Explica el impacto en mantenimiento.
+
+7 En una aplicación grande, ¿qué ventaja ves en tener una clase o interfaz que representa el “esquema” (nombres de columnas, tipos, etc.) frente a ir escribiendo los nombres a mano en cada ResultSet.getXXX("columna")? Pon un ejemplo de error típico que se evita.
+
+
+PREGUNTAS TEMA FILE - XML.
+
+8 Describe el recorrido completo: desde que tienes un objeto Java en memoria hasta que lo puedes guardar en un fichero (texto, binario o XML) y volver a reconstruirlo después. Nombra al menos dos tecnologías o conceptos vistos (por ejemplo, Serializable, DOM, streams…).
+
+9. ¿Qué diferencia conceptual ves entre:
+
+- serializar un objeto Alumno a un .dat con ObjectOutputStream,
+
+- generar un XML con los datos de Alumno usando DOM?
+No escribas código, compáralos en términos de legibilidad, portabilidad y acoplamiento.
+
+10. Para qué crees que sirve, en un proyecto real, poder transformar un XML con XSLT a HTML o a otro XML distinto? Pon un ejemplo de uso concreto (listado, informe, integración, etc.).
+
+
+11. En la parte de ficheros, se habla de Reader/Writer frente a InputStream/OutputStream. Sin entrar en APIs, ¿qué criterio práctico usarías para decidir si trabajas con flujos de caracteres o de bytes en una aplicación real? Explica cual es la diferencia en los flujos
+
+12. ¿Qué diferencia hay entre usar FileReader y BufferedReader en la lectura de archivos en Java? 
+
+13. En Java, ¿cómo cargarías un archivo JSON y accederías a uno de sus atributos? Indica para que utilizarías la librería Gson en el código.
+
+
+14. Si quiero leer un .txt con la siguiente linea de codigo nombre,apellido,dni donde se repite tantas veces como usuarios tenga en el fichero. ¿Como lo llevarias a una List de java?
+

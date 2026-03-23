@@ -72,4 +72,14 @@ PREGUNTAS HIBERNATE
 
 SPRING DATA
 
+26. Explica la diferencia entre definir consultas mediante convenciones de nombres de métodos (ej. findByName) y usando la anotación @Query con JPQL en un repositorio JpaRepository.
 
+27. Dónde entra Spring Data en la infraestructura de un sistema con transacciones contra BD? ¿Qué anotaciones y archivos de configuración son esenciales (ej. application.properties), y qué se indica en ellos?
+
+29. ¿Cual es la diferencia entre un servicio, un repositorio y un modelo?
+
+30. Cuando hablamos de controlador, ¿a que nos referimos? Indica cual es el cometido principal de un controlador, las anotaciones que debe tener y para que se utilzan. Es necesario un controlador por modelo?
+
+31. Indica que hace exáctamente la notacion @Autowired cuando queremos iniciar una variable.
+
+32. Indica cual es la estructura de una URL para que esta pueda ser procesada por el servidor TOMCAT levantado en Spring. Indica cuales son las diferentes posibilidades a la hora de pasar parámetros en una ruta

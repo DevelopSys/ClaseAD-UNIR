@@ -78,6 +78,11 @@ public class ProductoController {
         realizarOperacion((p1, p2) -> p1 / p2,1,3);
         realizarOperacion((p1, p2) -> p1 - p2,1,3);
 
+        /*        Product masCaro = products.stream()
+                .sorted(Comparator.comparingDouble(Product::getPrice).reversed())
+                .findFirst()
+                .orElseThrow(() -> new IllegalStateException("No hay productos"));*/
+
     }
 
     public void realizarOperacion(BiFunction<Integer, Integer, Integer> funcion, int op1, int op2) {

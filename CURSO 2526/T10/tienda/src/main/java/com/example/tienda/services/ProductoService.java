@@ -24,4 +24,9 @@ public class ProductoService {
     public Optional<Producto> getId(long id){
         return productoRepository.findById(id);
     }
+
+    public Producto getMostExpensiveProduct() {
+        return productoRepository.findTopByOrderByPrecioDesc()
+                .orElseThrow(() -> new IllegalStateException("No hay productos"));
+    }
 }

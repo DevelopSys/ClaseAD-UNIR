@@ -46,3 +46,30 @@ No escribas código, compáralos en términos de legibilidad, portabilidad y aco
 
 14. Si quiero leer un .txt con la siguiente linea de codigo nombre,apellido,dni donde se repite tantas veces como usuarios tenga en el fichero. ¿Como lo llevarias a una List de java?
 
+PREGUNTAS HIBERNATE
+
+15. En Hibernate, ¿qué diferencia hay entre el estado transient, persistent y detached de una entidad? Explica con un ejemplo práctico qué pasa con un objeto Usuario cuando lo cargas con session.get(), lo modificas y luego haces session.close() sin hacer commit.
+
+16. Explica la diferencia práctica entre FetchType.LAZY y FetchType.EAGER en una relación @OneToMany. Si mapeas Cliente con una lista de Pedidos y usas LAZY, ¿qué problema surge al intentar iterar esa lista fuera de la sesión y cómo lo solucionas en código?
+
+17. Explica el ciclo de vida de una Session de Hibernate. Si en un método de servicio haces session.beginTransaction(), cargas entidades, haces rollback() por excepción y luego intentas usar esas entidades, ¿qué error obtienes y por qué?
+
+18. ¿Qué diferencia hay entre Criteria API (o CriteriaBuilder en Hibernate 5+) y HQL en consultas complejas? Escribe un ejemplo práctico de CriteriaBuilder para buscar Productos con precio > 50€ y categoría "Electrónica", explicando por qué es más seguro que concatenar strings en HQL.
+
+19. Indica que hacer las anotaciones @Trascient @Id @Query @OnetoOne
+
+20. Cuanto se gestionan relaciones entre clases, indicas las necesidades obligatorias y optativas entre las dos clases, identificando las direcciones
+
+21. Si configuramos relaciones entre dos entidades, ¿Que tipos de objetos se gestionan en cada una de las relaciones @OnetoOne @ManytoMany @OnetoMany?
+
+22. Que opción de hibernate me permite gestionar la base de datos sin necesidad de ejecutar sentencias SQL para la creación del esquema. Que diferencia hay entre update y create en dicha configuracion
+
+23. Imagina que quieres crear una relacion @ManytoMany, si hablamos de tablas ¿que necesidades tendríamos en la base de datos?
+
+24. ¿Cual es la diferencia entre hacer una query mediante CriteraQuery HQL o NamedQuery?
+
+25. Explica la donde entra hibernate en la infraestructura de un sistema que ealiza transacciones contra la base de datos. Que archivos de configuración son esenciales y que es lo que se indica en ellos.
+
+SPRING DATA
+
+

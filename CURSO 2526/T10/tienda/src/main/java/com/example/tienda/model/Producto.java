@@ -33,7 +33,6 @@ public class Producto {
     // TODO gestion de la relacion
     @JsonBackReference("producto-categoria")
     private Categoria categoria;
-
     @JsonManagedReference("usuario-producto")
     @ManyToMany(mappedBy = "listaProductos")
     public Set<Usuario> listaUsuario;

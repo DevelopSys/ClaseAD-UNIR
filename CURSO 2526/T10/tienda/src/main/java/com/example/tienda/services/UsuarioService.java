@@ -70,8 +70,6 @@ public class UsuarioService {
         return usuarioEncontrado;
     }
 
-
-
     // quiero obtener el total de productos que tiene el usuario
     // coste total
     // id -> usuario

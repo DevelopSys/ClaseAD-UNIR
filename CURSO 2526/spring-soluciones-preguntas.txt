@@ -1,0 +1,71 @@
+spring 
+	servidor web -> TOMCAT
+
+	cliente <-------------> servidor <--------------> bases datos
+
+repositorio 
+
+			querys por notacion
+			void findByXXXXXX() -> select * from XXXx where PROPIEDAD = XXX
+			void findByXXXXXXANDXXXXOrderBy() 
+			@Query(FROM u WHERE u.nombre = :nombre) -> personalizando la query
+			void getAllUserBy(@Param String nombre)
+
+infraestructura - diferencia
+	
+	cliente <-------------> SPRING <--------------> bases datos
+	configuraciones:
+		resources -> application.propierties -> json yaml -> url conexion (jdbc:mysql://127.0.0.1:3306/db, root, root, ddl, sql, path-controller, cors, dialect)
+		@SpringApplication -> main
+		model -> @Entity @Table @Id @Column @OnetoOne (tipo de relacion)
+		repositorios -> acceso a la base de datos @Repository, interfaz extends JPARepository
+		servicios -> logica que llama al repositorio. @Service @Transactional @Autowired
+		controller -> la parte de acceso desde fuera @Controller @RestController @RequestMapping @GetMapping
+
+controlador
+	forma de acceso desde fuera a las peticios sobre la base de datos
+	@RestContoller -> es un controlador al que le piden datos y los retorna
+	@RequestMapping -> indica la ruta que se pondra en la URL para poder llegar al controlador
+	@Get/Post/Put/DeteleMapping('') - indica la ruta que se pondra en la URL (junto con la anterior) para poder llegar al metodo del controlador (endpoint)
+
+	No tiene porque tener un controlador asociado al modelo
+
+Autowired
+
+	Inyecta de forma atomatica la dependencia (beans) sin necedidad de iniciarla de forma explicita en un constructor
+
+		Servicio -> @Autowired Repositorio
+		Controller -> @Autowired Servicio
+
+URL
+
+	https://127.0.0.1/api/data/
+	https://127.0.0.1/api/user/
+	https://127.0.0.1/api/products/create -> create
+	https://127.0.0.1/api/products/delete -> delete
+	https://127.0.0.1/api/products/get -> get
+	https://127.0.0.1/api/products/ -> /
+	
+	protocolo://servidor/rura/endpoint
+
+
+	parametros 
+	@GetMapping(/get/{id})
+	public retorno nombre(@PathVariable int id)
+	https://127.0.0.1/api/products/get/1 -> path -> filtro
+
+	@GetMapping(/get)
+	public retorno nombre(@RequestParam int id, @RequestParam String name)
+	https://127.0.0.1/api/products/get?id=valor&name=valor -> Request -> filtros
+
+
+	@GetMapping(/get)
+	public retorno nombre(@BodyParam User u)
+	https://127.0.0.1/api/products/get -> body -> filtros avanzados o inserciones / borrados / actualizaciones
+	{
+		name:nombre,
+		surname:apellido,
+		age:12,
+		email: correo
+	}
+

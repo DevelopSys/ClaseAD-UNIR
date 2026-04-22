@@ -142,8 +142,6 @@ public class UsuarioController {
         response.put("data", usuario);
         response.put("size", usuario.getListaProductos());
         response.put("total",total);
-
-
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 

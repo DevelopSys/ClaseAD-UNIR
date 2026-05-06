@@ -1,0 +1,50 @@
+File
+	Flujo I/O
+		txt
+			Writer (byte a byte) / Buffered - Print (string a string)
+			Reader (byte a byte) / Buffered (string a string)
+		object
+			ObjectOutput - FileInput 
+			ObjectInput -  FileOutput
+			class Serializable / serialVersionUID
+
+XML
+
+	Estructura, para que me vale
+	XPATH / XQUERY 
+
+JDBC
+
+	Como se gestiona una connection -> singleton
+	URL de connection
+	PS / ST -> execute executeUpdate
+	RS -> executeQuery -> while(rs.next)
+
+Hibernate
+
+	anotaciones -> clase relaciones 
+	gestion de las sesiones
+	ORM -> save, delete, merge, list -> HQL
+
+	ClaseAlumno							ClaseCurso
+		@ManyOne							@OneMany
+		Curso 								List<Alumnos>					
+
+Spring
+
+	anotaciones -> clase relaciones 
+	clases -> servicio / repositorio / model / controller
+	controller -> entender su contenido. saber que es un endpoint, saber tipos de metodos, los tipos de paramentros
+
+BBOO -> xxxxx
+
+PREGUNTAS CON CARIÑO
+
+Etiquetas JPA
+Elementos proyecto Spring y su cometido
+Elementos ejecucion sobre JDBC
+Modelo 3 capas acceso a datos
+Direrencias entre lectura mediante reader y buffer
+Direrencias entre escrituras bit a bit y string
+Definicion de endpoint y estructuras de URL
+Connection, patron DTO y Singleton

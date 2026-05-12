@@ -40,11 +40,146 @@ BBOO -> xxxxx
 
 PREGUNTAS CON CARIÑO
 
-Etiquetas JPA
+Etiquetas JPA -> 
 Elementos proyecto Spring y su cometido
 Elementos ejecucion sobre JDBC
 Modelo 3 capas acceso a datos
 Direrencias entre lectura mediante reader y buffer
+	FileReader (lectura int->ASCII->char a int) se que termino cuando -1 BufferedReader (lectura string a string) termino con la lectura de un null
+
+	LECTURAS -> FileReader BufferedReader
+	ESCRITURAS -> FileWriter BufferedWriter / PrintWriter
+
+	ObjectOutput -> FileOutput -> flujo saliente de objetos
+	ObjectInput -> FileInput -> flujo entrante de objetos
+
+	Object -> SERIALIZADO
+
+
 Direrencias entre escrituras bit a bit y string
-Definicion de endpoint y estructuras de URL
-Connection, patron DTO y Singleton
+Definicion de endpoint y estructuras de URL https://dominio/reques/api/endpoint?params=valor o @body
+Connection, patron DAO y Singleton
+
+Repaso martes 12 mayo
+
+Unidireccion
+@Data -> @AllArgs @NoArgs @Getter @Setter @ToString @EqualHashCode
+@ToString(exclude = "atributoRel")
+ClaseA
+private String atributoA
+private String atributoB
+@ManytoOne
+@JoinColumn(name="nombre_columna")
+private ClaseB atributoRel
+
+@OnetoMany
+@JoinColumn(name="nombre_columna")
+private Set<ClaseB> atributoRel2
+
+ClaseA{atributoA:"Valor",atributoB: "Valor"}
+
+Map mapa = new HashMap<>()
+
+
+
+Bidireccion
+@Data -> @AllArgs @NoArgs @Getter @Setter @ToString @EqualHashCode
+@ToString(exclude = "atributoRelBi")
+ClaseB
+private String atributoA
+private String atributoB
+@OnetoMany(mappedBy="nombre_atributo_realacion_claseA")
+Set<ClaseA> atributoRelBi
+
+@ManytoOne (mappedBy="nombre_atributo_realacion_claseA")
+private ClaseB atributoRel2
+
+ClaseB{atributoA:Valor,atributoB: Valor}
+
+
+Empleado	 			Departamento		Jefatura
+id 						id 					id
+nombre 					nombre 				id_fk_dp
+apellido									id_fk_empl
+correo
+
+Empleado
+@MantToMany
+@JoinTable(name = "jefatura", @JoinColumns= @JoinColum(name="id_fk_empl")),@InverseColumn(name="id_fk_dp"))
+Set<Departamentos> departamentos
+
+public void addDepartamento(Departamento d){
+	this.departament.add(d)
+	d.addEmpleado(this)
+
+}
+
+
+Departamento
+@MantToMany(mappedyBy= "departamentos")
+Set<Empleados> empleados
+
+
+public void addEmpleado(Empleado e){
+	this.empleados.add(e)
+
+}
+
+
+Usuarios
+id
+nombre
+apellido
+localidad
+provincia
+calle
+
+
+Usuario
+private String nombre
+private String apellido
+@Embedded
+private Direccion direccion
+@Transcient
+private int telefono
+
+
+@Embeddable
+Direccion
+private String localidad, provincia, calle
+
+Session session
+Transaction transaction
+session.persist(new Usuario("Borja","Martin",new Direccion("Madrid","Madird","Calle"), 123456))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+base datos
+	informes
+		id
+		fecha
+		creador
+		responsable
+		modificador
+		precio
+		asunto
+
+datos de un informe
+	InformeDTO
+		id
+		fecha
+		creado

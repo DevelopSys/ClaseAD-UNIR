@@ -1,0 +1,57 @@
+Ficheros
+	txt
+	bin
+	data
+	xml
+	json
+
+
+CLIENTE <-> FICHERO -------- SERVIDOR (API)
+
+Capa 1 JDBC
+
+CLIENTE --------------- SQL - MySQL/MariaDB/Postgresql/Oracle  / NSQL - Mongo/Firebase/Supabase -> Documentos -> JSON
+						DBeaver
+
+CreateReadUpdateDelete -> DAO
+
+	INSERT INTO zzzzz 
+	SELECT zzzzzz WHERE zzzzzz
+
+
+Capa 2 ORM -> Hibername 
+
+CLIENTE + ORM --------------- BD
+
+	Persona() -> INSERT into persona () VALUES ()
+	data.save(new Persona())
+	1 a 1
+	1 a n // n a 1
+	n a m
+
+Capa 3 SpringBoot
+
+CLIENTE ---------------------- Spring + ORM --------------- BD
+https://dummyjson.com/products
+								endpoint
+										 					Select
+								respuesta bd
+json
+
+
+* JWT
+
+movil ----------------- servidor web ------------------ bd
+
+
+https://netflix.com/login asdasd asdasd
+sdfgh2j3k4j5h3ghj4k5jh5g543j24f2jf4h2gf4hj23f4j2h3f4jh2f34jh2g3f4jh2g3f4j2h3g4f2jh3g4f (al movil)
+
+https://netflix.com/peliculas/terror/45 + body (jwt 120)
+
+
+
+
+
+
+

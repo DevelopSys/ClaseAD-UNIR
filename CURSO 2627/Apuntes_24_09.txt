@@ -1,0 +1,45 @@
+LOCAL						GITHUB
+Repositorio					Repositorio
+.git(remoto)
+MiProyecto
+	JDK - Clases de Java
+		wrapper
+		httclient
+		java.sql
+		JDBC
+
+
+
+MiProyecto
+	resources -> getClass()
+	test -> .java
+	pom.xml -> configuraciones del proyecto / dependencias
+		<>JDBC</>
+	build.gradle
+	JDK - Clases de Java
+		wrapper
+		httclient
+		java.sql
+		JDBC
+
+
+DOCKER -> script java Ruta-> JVM 
+	Entrada.java -> compilado -> Entrada.class (ByteCode) Ejecuta (JVM) 
+	javac Ruta -> Entrada.class
+	java Ruta -args asd asd asd asd asd asd asd asd asd asd asd asd asd asd-> JVM 
+
+DOCKER
+	Entrada.java -> compilado -> Entrada.class (ByteCode) Ejecuta (JVM) 
+	javac Ruta -> Entrada.class
+	java Ruta-> JVM 
+
+DOCKER
+	Entrada.java -> compilado -> Entrada.class (ByteCode) Ejecuta (JVM) 
+	javac Ruta -> Entrada.class
+	java Ruta-> JVM 
+
+
+	ModelViewControl
+
+
+

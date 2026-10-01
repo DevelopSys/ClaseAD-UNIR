@@ -1,4 +1,5 @@
 import controller.FileContoller;
+import model.Persona;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -34,8 +35,11 @@ public class Entrada {
         }while (true);
         System.out.println("Fichero creado correctamente");
         // terminamos el uso del flujo -> cerrando el flujo*/
-        String nombre = lector.nextLine();
-        fileContoller.crearCarpeta(nombre);
+        // String nombre = lector.nextLine();
+        // boolean resultado = fileContoller.borrarFichero("escritura.txt");
+        // System.out.println(resultado);
+        // fileContoller.listadoTotal("");
+        fileContoller.escrituraFicheroTXT("escritura.csv");
         lector.close();
 
     }

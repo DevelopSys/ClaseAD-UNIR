@@ -1,5 +1,3 @@
-name,surname,age,mail
-Nombre1,Apellido1,123,correo1
-Nombre2,Apellido2,123,correo2
-Nombre3,Apellido3,123,correo3
-Nombre4,Apellido4,123,correo4
+Esto es un ejemplo de lectura
+De un par de lineas
+En el mismo fichero

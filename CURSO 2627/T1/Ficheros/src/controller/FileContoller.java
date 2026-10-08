@@ -1,6 +1,7 @@
 package controller;
 
 import model.Persona;
+import model.Usuario;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -93,16 +94,16 @@ public class FileContoller {
         BufferedWriter bw = null;
         PrintWriter pw = null;
         ArrayList<Persona> listado = new ArrayList<>();
-        listado.add(new Persona("Nombre1","Apellido1",123,"correo1"));
-        listado.add(new Persona("Nombre2","Apellido2",123,"correo2"));
-        listado.add(new Persona("Nombre3","Apellido3",123,"correo3"));
-        listado.add(new Persona("Nombre4","Apellido4",123,"correo4"));
+        listado.add(new Persona("Nombre1", "Apellido1", 123, "correo1"));
+        listado.add(new Persona("Nombre2", "Apellido2", 123, "correo2"));
+        listado.add(new Persona("Nombre3", "Apellido3", 123, "correo3"));
+        listado.add(new Persona("Nombre4", "Apellido4", 123, "correo4"));
 
         try {
-            fw = new FileWriter(file, true); // bit byte string
-            pw = new PrintWriter(fw);
+            // fw = new FileWriter(file, true); // bit byte string
+            pw = new PrintWriter(new FileWriter(file, true));
             PrintWriter finalPw = pw;
-            listado.forEach(item-> finalPw.println(item.toCSV()));
+            listado.forEach(item -> finalPw.println(item.toCSV()));
             // ejecuciones
         } catch (IOException e) {
             System.out.println("Error en la generacion del writer");
@@ -118,5 +119,96 @@ public class FileContoller {
             System.out.println("Error en la generacion del writer");
         }
          */
+    }
+
+    public void lecturaFicheroTXT(String path) {
+        File file = new File(basePath + path);
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+        /*
+        try (FileReader fileReader = new FileReader(file)) {
+
+            // el fileReader queda cerrado
+        } catch (IOException e){
+
+        }*/
+        try {
+            fileReader = new FileReader(file); // bit a bit
+            bufferedReader = new BufferedReader(fileReader); // string a string
+            String linea = null;
+            // int code = fileReader.read(); -1
+            // int 69-> char E
+            /*int code = -1;
+            while ( (code = fileReader.read()) != -1){
+                System.out.print((char) code);
+            }*/
+            StringBuilder builder = new StringBuilder();
+            while ((linea = bufferedReader.readLine())!=null){
+                builder.append(linea+"\n");
+            }
+            System.out.println(builder.toString());
+
+
+
+
+        } catch (FileNotFoundException e) {
+            System.out.println("La ruta es invalida");
+        } catch (IOException e) {
+            System.out.println("No hay permisos de lectura");
+        } finally {
+            try {
+                Objects.requireNonNull(bufferedReader).close();
+            } catch (IOException e) {
+                System.out.println("Error al cerrar el fichero");
+            }
+        }
+
+
+    }
+
+    public List<Persona> importarCSV(String path){
+        List<Persona> lista = new ArrayList();
+        File file = new File(basePath+path);
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
+            String linea = bufferedReader.readLine();
+            while ((linea = bufferedReader.readLine())!=null){
+                // public Persona(String nombre, String apellido, int edad, String mail) {
+                String[] datos = linea.split(",");
+                Persona p = new Persona(datos[0], datos[1], Integer.parseInt(datos[2]), datos[3]);
+                lista.add(p);
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return lista;
+    }
+
+    public void escribirObjetos(String path){
+        File file = new File(path);
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))){
+            oos.writeObject(new Usuario("Borja","Martin","1234A"));
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void lecturaObjetos(String path){
+        File file = new File(basePath+path);
+        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))){
+            Usuario usuario = (Usuario) ois.readObject();
+            System.out.println(usuario);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            System.out.println("Conversion en UID no correcta");
+        } catch (ClassCastException e){
+
+        }
     }
 }

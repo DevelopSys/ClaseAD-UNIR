@@ -39,7 +39,9 @@ public class Entrada {
         // boolean resultado = fileContoller.borrarFichero("escritura.txt");
         // System.out.println(resultado);
         // fileContoller.listadoTotal("");
-        fileContoller.escrituraFicheroTXT("escritura.csv");
+        //fileContoller.escrituraFicheroTXT("escritura.csv");
+        // fileContoller.importarCSV("escritura.csv");
+        fileContoller.lecturaObjetos("usuarios.obj");
         lector.close();
 
     }

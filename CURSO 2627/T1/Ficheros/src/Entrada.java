@@ -41,6 +41,7 @@ public class Entrada {
         // fileContoller.listadoTotal("");
         //fileContoller.escrituraFicheroTXT("escritura.csv");
         // fileContoller.importarCSV("escritura.csv");
+        // fileContoller.escribirObjetos("usuarios.obj");
         fileContoller.lecturaObjetos("usuarios.obj");
         lector.close();
 

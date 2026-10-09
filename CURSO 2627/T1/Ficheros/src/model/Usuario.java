@@ -6,7 +6,7 @@ import java.io.Serializable;
     // usados (obligatoriamente) en las clases que implementan dicha interfaz
 public class Usuario implements Serializable {
 
-    private static final Long serialVersionUID = 5862860582351271964L;
+    private static final Long serialVersionUID = -7096624273992510137L;
     private String  nombre;
     private String correo;
     private transient String pass;

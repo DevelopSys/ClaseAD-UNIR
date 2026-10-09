@@ -186,7 +186,7 @@ public class FileContoller {
     }
 
     public void escribirObjetos(String path){
-        File file = new File(path);
+        File file = new File(basePath+path);
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))){
             oos.writeObject(new Usuario("Borja","Martin","1234A"));
         } catch (FileNotFoundException e) {

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<usuarios idioma="es" numero="6" version="1">
+    <usuario dni="DNI1" telefono="123">
+        <nombre>Nombre1</nombre>
+        <apellido>Apellido1</apellido>
+        <correo>Correo1</correo>
+    </usuario>
+    <usuario dni="DNI2" telefono="123">
+        <nombre>Nombre2</nombre>
+        <apellido>Apellido2</apellido>
+        <correo>Correo2</correo>
+    </usuario>
+    <usuario dni="DNI3" telefono="123">
+        <nombre>Nombre3</nombre>
+        <apellido>Apellido3</apellido>
+        <correo>Correo3</correo>
+    </usuario>
+    <usuario dni="DNI4" telefono="123">
+        <nombre>Nombre4</nombre>
+        <apellido>Apellido4</apellido>
+        <correo>Correo4</correo>
+    </usuario>
+    <usuario dni="DNI5" telefono="123">
+        <nombre>Nombre5</nombre>
+        <apellido>Apellido5</apellido>
+        <correo>Correo5</correo>
+    </usuario>
+    <usuario dni="DNI6" telefono="123">
+        <nombre>Nombre6</nombre>
+        <apellido>Apellido6</apellido>
+        <correo>Correo6</correo>
+    </usuario>
+</usuarios>

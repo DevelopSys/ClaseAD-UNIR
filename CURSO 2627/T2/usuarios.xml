@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD -->
+<usuarios version="1" indioma="es" numero="10">
+	<usuario dni="1234A" telefono="123123">
+		<nombre>
+			Borja
+		</nombre>
+		<apellido>
+			Martin
+		</apellido>
+		<correo>
+			borja@gmail.com
+		</correo>
+	</usuario>
+	<usuario dni="2345A" telefono="234234">
+		<nombre>
+			Maria
+		</nombre>
+		<apellido>
+			Lopez
+		</apellido>
+		<correo>
+			maria@gmail.com
+		</correo>
+	</usuario>
+	<usuario dni="3456A" telefono="345678" />
+</usuarios>

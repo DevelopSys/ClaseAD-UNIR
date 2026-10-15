@@ -1,14 +1,8 @@
 package model;
 
-import lombok.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import java.util.ArrayList;
-
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
 public class Pelicula {
 
     private String titulo, director;
@@ -17,10 +11,21 @@ public class Pelicula {
     private int anio;
     private double calificacion;
 
-    public Element parseoElemento(Document document, Pelicula item, Element nodoRoot){
+    public Pelicula(String titulo, String director, Actor[] actors, String genero, int anio, double calificacion) {
+        this.titulo = titulo;
+        this.director = director;
+        this.actores = actors;
+        this.genero = genero;
+        this.anio = anio;
+        this.calificacion = calificacion;
+    }
+
+    public Element parseoElemento(Document document, Pelicula item, Element nodoRoot) {
         Element nodoPelicula = document.createElement("pelicula");
-                /*if (item.getGenero() != null) {
-                }*/
+        /*
+         * if (item.getGenero() != null) {
+         * }
+         */
         nodoPelicula.setAttribute("genero", item.getGenero());
         nodoPelicula.setAttribute("anio", String.valueOf(item.getAnio()));
         nodoRoot.appendChild(nodoPelicula);
@@ -41,5 +46,29 @@ public class Pelicula {
             nodoActores.appendChild(nodoActor);
         }
         return nodoPelicula;
+    }
+
+    public Actor[] getActores() {
+        return actores;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    public double getCalificacion() {
+        return calificacion;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public String getTitulo() {
+        return titulo;
     }
 }

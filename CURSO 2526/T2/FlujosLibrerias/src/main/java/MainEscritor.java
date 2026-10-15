@@ -24,7 +24,5 @@ public class MainEscritor {
         } catch (JAXBException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 }

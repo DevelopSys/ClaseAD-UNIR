@@ -48,7 +48,6 @@ public class OperacionesXML {
                 System.out.println("La edad es: " + edad);
             }
 
-
         } catch (ParserConfigurationException e) {
             System.out.println("Error en el parseo");
         } catch (IOException e) {
@@ -63,93 +62,86 @@ public class OperacionesXML {
         Pelicula p1 = new Pelicula(
                 "Inception",
                 "Christopher Nolan",
-                new Actor[]{new Actor("Leonardo DiCaprio"), new Actor("Joseph Gordon-Levitt"), new Actor("Elliot Page")},
+                new Actor[] { new Actor("Leonardo DiCaprio"), new Actor("Joseph Gordon-Levitt"),
+                        new Actor("Elliot Page") },
                 "Ciencia ficción / Acción",
                 2010,
-                8.8
-        );
+                8.8);
 
         Pelicula p2 = new Pelicula(
                 "The Dark Knight",
                 "Christopher Nolan",
-                new Actor[]{new Actor("Christian Bale"), new Actor("Heath Ledger"), new Actor("Gary Oldman")},
+                new Actor[] { new Actor("Christian Bale"), new Actor("Heath Ledger"), new Actor("Gary Oldman") },
                 "Acción / Crimen / Drama",
                 2008,
-                9.0
-        );
+                9.0);
 
         Pelicula p3 = new Pelicula(
                 "Forrest Gump",
                 "Robert Zemeckis",
-                new Actor[]{new Actor("Tom Hanks"), new Actor("Robin Wright"), new Actor("Gary Sinise")},
+                new Actor[] { new Actor("Tom Hanks"), new Actor("Robin Wright"), new Actor("Gary Sinise") },
                 "Drama / Romance",
                 1994,
-                8.8
-        );
+                8.8);
 
         Pelicula p4 = new Pelicula(
                 "The Shawshank Redemption",
                 "Frank Darabont",
-                new Actor[]{new Actor("Tim Robbins"), new Actor("Morgan Freeman"), new Actor("Bob Gunton")},
+                new Actor[] { new Actor("Tim Robbins"), new Actor("Morgan Freeman"), new Actor("Bob Gunton") },
                 "Drama",
                 1994,
-                9.3
-        );
+                9.3);
 
         Pelicula p5 = new Pelicula(
                 "The Godfather",
                 "Francis Ford Coppola",
-                new Actor[]{new Actor("Marlon Brando"), new Actor("Al Pacino"), new Actor("James Caan")},
+                new Actor[] { new Actor("Marlon Brando"), new Actor("Al Pacino"), new Actor("James Caan") },
                 "Crimen / Drama",
                 1972,
-                9.2
-        );
+                9.2);
 
         Pelicula p6 = new Pelicula(
                 "Gladiator",
                 "Ridley Scott",
-                new Actor[]{new Actor("Russell Crowe"), new Actor("Joaquin Phoenix"), new Actor("Connie Nielsen")},
+                new Actor[] { new Actor("Russell Crowe"), new Actor("Joaquin Phoenix"), new Actor("Connie Nielsen") },
                 "Acción / Aventura / Drama",
                 2000,
-                8.5
-        );
+                8.5);
 
         Pelicula p7 = new Pelicula(
                 "Interstellar",
                 "Christopher Nolan",
-                new Actor[]{new Actor("Matthew McConaughey"), new Actor("Anne Hathaway"), new Actor("Jessica Chastain")},
+                new Actor[] { new Actor("Matthew McConaughey"), new Actor("Anne Hathaway"),
+                        new Actor("Jessica Chastain") },
                 "Ciencia ficción / Drama",
                 2014,
-                8.6
-        );
+                8.6);
 
         Pelicula p8 = new Pelicula(
                 "Pulp Fiction",
                 "Quentin Tarantino",
-                new Actor[]{new Actor("John Travolta"), new Actor("Samuel L. Jackson"), new Actor("Uma Thurman")},
+                new Actor[] { new Actor("John Travolta"), new Actor("Samuel L. Jackson"), new Actor("Uma Thurman") },
                 "Crimen / Drama",
                 1994,
-                8.9
-        );
+                8.9);
 
         Pelicula p9 = new Pelicula(
                 "The Matrix",
                 "Lana Wachowski, Lilly Wachowski",
-                new Actor[]{new Actor("Keanu Reeves"), new Actor("Carrie-Anne Moss"), new Actor("Laurence Fishburne")},
+                new Actor[] { new Actor("Keanu Reeves"), new Actor("Carrie-Anne Moss"),
+                        new Actor("Laurence Fishburne") },
                 "Ciencia ficción / Acción",
                 1999,
-                8.7
-        );
-// Cartel: https://m.media-amazon.com/images/I/51EG732BV3L._AC_.jpg
+                8.7);
+        // Cartel: https://m.media-amazon.com/images/I/51EG732BV3L._AC_.jpg
 
         Pelicula p10 = new Pelicula(
                 "Parasite",
                 "Bong Joon-ho",
-                new Actor[]{new Actor("Song Kang-ho"), new Actor("Cho Yeo-jeong"), new Actor("Choi Woo-shik")},
+                new Actor[] { new Actor("Song Kang-ho"), new Actor("Cho Yeo-jeong"), new Actor("Choi Woo-shik") },
                 "Drama / Thriller",
                 2019,
-                8.6
-        );
+                8.6);
 
         listaPeliculas.add(p1);
         listaPeliculas.add(p2);
@@ -168,23 +160,21 @@ public class OperacionesXML {
             Document document = documentBuilder.newDocument();
             // document.createElement("")
             // document
-            //<cartelera id=1>
+            // <cartelera id=1>
             Element nodoRoot = document.createElement("cartelera");
             nodoRoot.setAttribute("id", "1");
             document.appendChild(nodoRoot);
 
             // foreach -> recorrer -> no para modificar
             for (Pelicula item : listaPeliculas) {
-
-
-                item.parseoElemento(document,item,nodoRoot);
-                TransformerFactory transformerFactory = TransformerFactory.newInstance();
-                Transformer transformer = transformerFactory.newTransformer();
-
-                DOMSource domSource = new DOMSource(document);
-                StreamResult result = new StreamResult(new File("peliculas.xml"));
-                transformer.transform(domSource,result);
+                item.parseoElemento(document, item, nodoRoot);
             }
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+
+            DOMSource domSource = new DOMSource(document);
+            StreamResult result = new StreamResult(new File("peliculas.xml"));
+            transformer.transform(domSource, result);
 
             // node
             // node
@@ -194,7 +184,6 @@ public class OperacionesXML {
         } catch (ParserConfigurationException | TransformerException e) {
             System.out.println("Error en el parseo del documento");
         }
-
 
     }
 }

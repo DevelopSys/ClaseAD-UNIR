@@ -1,0 +1,50 @@
+XML -> un fichero con etiquetas -> HTML
+
+XML -> 	interpretar GUI -> Android, JavaFX, Web
+		configuraciones -> Android (AndroidManifest.XML), Docker (sevicios), Linux
+		almacenamiento -> base de datos -> BaseX -> XPath o XQuery
+
+XML vs HTML
+
+	XML es conjunto de etiquetas
+		<hola>
+			<adios>
+			</adios>
+		</hola>
+
+definir un xml
+
+<declaracion del tipo> ?xml version charset
+<root atributos="valor" a1="" a2="">
+	<n1 atributo1 = "" atributo2 = "">
+		Valor
+	</n1>
+	<n1 atributo1 = "" atributo2 = "">
+		Valor
+	</n1>
+	<n1 atributo1 = "" atributo2 = "">
+		Valor
+	</n1>
+	<n1 atributo1 = "" atributo2 = "">
+		Valor
+	</n1>
+	<n1 atributo1 = "" atributo2 = "" atributo3= "">
+		<n2>valor</n2>
+	</n1>
+
+	<n1 atributo1 = "" atributo2 = "" atributo3= ""/>
+</root>
+
+Java -> XML -> Objectos
+Java -> Objectos -> XML -> exportarlo
+
+Local 
+	proyecto ---------------> pom.xml										
+		dependencias
+		configuraciones
+
+
+Local ---------------> pom.xml
+	proyecto
+		dependencias
+		configuraciones

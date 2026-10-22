@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<agenda>
+    <data dni="1234A">
+        <nombre>Alumno 1</nombre>
+        <apellido>Apellido 1</apellido>
+        <nota>4</nota>
+        <direccion>
+            <provincia>Madrid</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </data>
+    <data dni="2234A">
+        <nombre>Alumno 2</nombre>
+        <apellido>Apellido 2</apellido>
+        <nota>2</nota>
+        <direccion>
+            <provincia>Barcelona</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </data>
+    <data dni="3234A">
+        <nombre>Alumno 3</nombre>
+        <apellido>Apellido 3</apellido>
+        <nota>6</nota>
+        <direccion>
+            <provincia>Bilbao</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </data>
+    <data dni="4234A">
+        <nombre>Alumno 4</nombre>
+        <apellido>Apellido 4</apellido>
+        <nota>7</nota>
+        <direccion>
+            <provincia>Valencia</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </data>
+    <data dni="5234A">
+        <nombre>Alumno 5</nombre>
+        <apellido>Apellido 5</apellido>
+        <nota>7</nota>
+        <direccion>
+            <provincia>Sevilla</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </data>
+    <data dni="6234A">
+        <nombre>Alumno 6</nombre>
+        <apellido>Apellido 6</apellido>
+        <nota>9</nota>
+        <direccion>
+            <provincia>Zaragoza</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </data>
+    <data dni="7234A">
+        <nombre>Alumno 7</nombre>
+        <apellido>Apellido 7</apellido>
+        <nota>10</nota>
+        <direccion>
+            <provincia>Malaga</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </data>
+</agenda>

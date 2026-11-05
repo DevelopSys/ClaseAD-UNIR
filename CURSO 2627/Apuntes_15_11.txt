@@ -1,0 +1,72 @@
+Almacenamiento
+	Ficheros -> txt, bin, json (http), xml (html) -> almacenamiento secundario -> memoria
+
+Base datos
+	
+	Relacional -> SQL -> Relacion 1 a 1, 1 a n / n a 1, n a m -> key -> MySQL, MariaDB, Postgresql, Oracle
+
+		Esquema
+			Tablas -> Registros -> Columna -> cada una es un dato
+
+			-> cada tabla -> PK (unica, ai) / FK / UK
+				- cada elemento tiene la misma estructura que el resto de los registros
+
+			Usuarios ->
+				nombre, apellido, mail, telefono, edad
+				1, asd,asd,asd,asd,asd,asd
+				2, asd,(EMPTY),asd,asd,asd,0
+
+	No Relacional -> NoSQL -> Mongo
+
+		Esquema
+			Colecciones -> documentos -> JSON. Usuarios
+				{nombre: asd, apellido: asd, edad: 123, telefono: 123}
+				{name: asd, age: 123}
+			Perfiles -> documentos -> JSON
+				{tipo: admin, numero: 1}
+
+
+
+
+1- T3/4JDBC
+
+	cliente (java)			    ----			BaseDatos (SQL)
+	cliente (movil)			 	----			BaseDatos (SQLite)					DBevaer (SGBD)
+	cliente (escritorio)	 	----			BaseDatos (SQL)
+								driver .jar
+						    habla el lenguaje
+							de la base de datos
+							(host - user - pass)
+							(host - Properties)
+
+	SQL -> Query -> "INSERT INTO alumnos (name, surname, mail, phone) VALUES ('"+Borja+"','"+Martin+"','"+borja@gmail+"'")"
+	String.format()
+	
+	Connection -> 			lo que me permite llegar a la base de datos. Utiliza el patron singleton
+	Statetement -> 			el trabajo lo hace la base de datos
+	PrepareStatatement -> 	el trabajo lo hace el codigo, la base de datos solo ejecuta. Los datos se parametrizan. Securizar las 									ejecuciones -> no es una "query en bruto". No hay SQL Injection
+
+							INSERT execute()-> boolean  UPDATE / DELETE executeUpdate()-> int
+
+	ResultSet ->			el conjunto de registros que cumplen la condicion de SELECT. Leido mediante un 
+							SELECT executeQuery() -> ResultSet
+
+2- T5/6/7 Hibernate
+	
+	cliente (java)			    ----			BaseDatos (SQL)
+	+ ORM
+							   driver
+
+	SQL -> ps, st, rs
+	Objecto -> SQL
+	HQL
+
+3- T10 Spring
+
+
+	cliente (java)			    ----		SRV				----						BaseDatos (SQL)
+							   				ORM				driver
+							   				ps,st,rs
+	JSON
+
+	192.168.1.10/api/users

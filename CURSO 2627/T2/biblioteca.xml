@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <Libro id="L01" categoria="novela" disponible="si">
+        <Titulo>La última estación</Titulo>
+        <Autor>
+            <Nombre>Ana</Nombre>
+            <Apellido>Torres</Apellido>
+        </Autor>
+        <Anio>2020</Anio>
+        <Paginas>320</Paginas>
+        <Precio>18.50</Precio>
+    </Libro>
+    <Libro id="L02" categoria="informatica" disponible="si">
+        <Titulo>Java desde cero</Titulo>
+        <Autor>
+            <Nombre>Luis</Nombre>
+            <Apellido>Martín</Apellido>
+        </Autor>
+        <Anio>2023</Anio>
+        <Paginas>650</Paginas>
+        <Precio>32.00</Precio>
+    </Libro>
+    <Libro id="L03" categoria="novela" disponible="no">
+        <Titulo>El secreto del faro</Titulo>
+        <Autor>
+            <Nombre>Ana</Nombre>
+            <Apellido>Torres</Apellido>
+        </Autor>
+        <Anio>2018</Anio>
+        <Paginas>480</Paginas>
+        <Precio>21.00</Precio>
+    </Libro>
+    <Libro id="L04" categoria="informatica" disponible="no">
+        <Titulo>Bases de datos prácticas</Titulo>
+        <Autor>
+            <Nombre>Marta</Nombre>
+            <Apellido>López</Apellido>
+        </Autor>
+        <Anio>2024</Anio>
+        <Paginas>540</Paginas>
+        <Precio>28.50</Precio>
+    </Libro>
+    <Libro id="L05" categoria="historia" disponible="si">
+        <Titulo>Un viaje por Roma</Titulo>
+        <Autor>
+            <Nombre>Carlos</Nombre>
+            <Apellido>Ruiz</Apellido>
+        </Autor>
+        <Anio>2021</Anio>
+        <Paginas>410</Paginas>
+        <Precio>24.00</Precio>
+    </Libro>
+    <Libro id="L06" categoria="informatica" disponible="si">
+        <Titulo>XML y sus lenguajes</Titulo>
+        <Autor>
+            <Nombre>Marta</Nombre>
+            <Apellido>López</Apellido>
+        </Autor>
+        <Anio>2022</Anio>
+        <Paginas>280</Paginas>
+        <Precio>19.00</Precio>
+    </Libro>
+</biblioteca>

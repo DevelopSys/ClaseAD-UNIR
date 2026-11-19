@@ -9,14 +9,13 @@ public class DBConnection {
 
     private static Connection connection;
 
-    public static Connection getConnection() {
+    public static Connection getConnection() throws SQLException {
 
-        if (connection == null) {
+        if (connection == null || connection.isClosed()) {
             createConnection();
         }
         return connection;
     }
-
     private static void createConnection() {
         try {
             String pass = System.getenv("DB_PASS");
@@ -30,4 +29,6 @@ public class DBConnection {
             System.out.println(e.getMessage());
         }
     }
+
+
 }

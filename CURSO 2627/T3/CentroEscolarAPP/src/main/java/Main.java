@@ -21,7 +21,8 @@ public class Main {
                 System.out.println("3: Modificar usuario (por profile)");
                 System.out.println("4: Buscar usuario (por correo)");
                 System.out.println("5: Lista usuarios ");
-                System.out.println("6: Salir");
+                System.out.println("6: Importar desde JSON");
+                System.out.println("7: Salir");
                 System.out.println("Indica que quires hacer");
                 opcion = scanner.nextInt();
                 switch (opcion) {
@@ -53,32 +54,37 @@ public class Main {
                     }
                     case 2 -> {
                         System.out.println("Indica el nombre que quieres borrar");
-                        String name= scanner.next();
-                        System.out.println("El numero de elementos borrados es de "+school.deleteStudent(name));
+                        String name = scanner.next();
+                        System.out.println("El numero de elementos borrados es de " + school.deleteStudent(name));
                     }
                     case 3 -> {
                         System.out.println("Que perfil quieres actualizar");
                         int profile = scanner.nextInt();
-                        System.out.println("Actualizados: "+school.updateUsers(profile));
+                        System.out.println("Actualizados: " + school.updateUsers(profile));
                     }
                     case 4 -> {
                         System.out.println("Indica el correo que quieres buscar");
                         String mail = scanner.next();
                         Student find = school.getUserByMail(mail);
-                        if(find != null){
+                        if (find != null) {
                             find.showData();
-                        }else {
+                        } else {
                             System.out.println("No hay datos del usuario, mail no reconocido");
                         }
                     }
                     case 5 -> {
                         // school.getAllStudents().forEach(Student::showData);
-                        for (Student item: school.getAllStudents()) {
+                        for (Student item : school.getAllStudents()) {
                             item.showData();
                         }
                     }
+                    case 6 -> {
+                        System.out.println("Cuantos usuarios quieres importar");
+                        int userNumber = scanner.nextInt();
+                        school.importUsers(userNumber);
+                    }
                 }
-            } while (opcion != 6);
+            } while (opcion != 7);
 
         } catch (InputMismatchException e) {
             System.out.println("Error de IO");

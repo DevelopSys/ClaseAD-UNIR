@@ -6,7 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import model.APIResponse;
 import model.Student;
+import model.StudentAPI;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -144,6 +146,27 @@ public class School {
         }
 
         return studentsList;
+    }
+
+    public void importUsers(int number) {
+        // peticion al JSON
+        APIController controller = new APIController();
+        List<StudentAPI> list = controller.getAllStudents(number);
+        list.forEach(item -> {
+            try {
+                System.out.println();
+                insertStudent(studentAPItoStudent(item));
+            } catch (SQLException e) {
+                System.out.println("Error de importacion");
+                System.out.println(e.getMessage());
+            }
+        });
+        // list.forEach(item -> System.out.println("Nombre: " + item.getName().getFirst() + " correo: " + item.getEmail()));
+    }
+
+    private Student studentAPItoStudent(StudentAPI studentAPI) {
+        return new Student(studentAPI.getName().getFirst(), studentAPI.getName().getLast(),
+                studentAPI.getEmail(), (int) studentAPI.getDob().getAge(),1L);
     }
 
 }
